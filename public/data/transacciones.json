@@ -1,1 +1,1602 @@
-[]
+[
+  {
+    "id": "t001",
+    "descripcion": "Se compra mercadería por $350.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), baja Caja (A-). El PN no varía porque ningún resultado está involucrado.",
+    "cuentas_involucradas": ["Mercaderías", "Caja"]
+  },
+  {
+    "id": "t002",
+    "descripcion": "Se compra mercadería por $820.000 a crédito (a 30 días)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), sube Proveedores (P+). El Activo y el Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Proveedores"]
+  },
+  {
+    "id": "t003",
+    "descripcion": "Un cliente paga $175.000 de una deuda pendiente en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Clientes / Deudores por ventas (A-). Se recompone el activo sin alterar el PN.",
+    "cuentas_involucradas": ["Caja", "Clientes"]
+  },
+  {
+    "id": "t004",
+    "descripcion": "Se paga a un proveedor $430.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Caja (A-), baja Proveedores (P-). El Activo y el Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Proveedores"]
+  },
+  {
+    "id": "t005",
+    "descripcion": "Se deposita en el banco $200.000 que estaban en caja",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Caja (A-). Solo cambia la composición del activo disponible; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Caja"]
+  },
+  {
+    "id": "t006",
+    "descripcion": "Se extraen del banco $95.000 para tener en caja",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Banco (A-). Movimiento interno del activo; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Banco"]
+  },
+  {
+    "id": "t007",
+    "descripcion": "El Banco Nación otorga un préstamo de $1.500.000 que se acredita en cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Préstamos bancarios (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos bancarios"]
+  },
+  {
+    "id": "t008",
+    "descripcion": "Se cancela una cuota de préstamo bancario por $120.000 desde la cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Préstamos bancarios (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos bancarios"]
+  },
+  {
+    "id": "t009",
+    "descripcion": "Se compra una computadora para uso de la empresa por $480.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Muebles y útiles / Equipos de computación (A+), baja Caja (A-). El PN no varía.",
+    "cuentas_involucradas": ["Equipos de computación", "Caja"]
+  },
+  {
+    "id": "t010",
+    "descripcion": "Se adquiere un rodado por $3.200.000 a crédito documentado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Rodados (A+), sube Documentos a pagar (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Rodados", "Documentos a pagar"]
+  },
+  {
+    "id": "t011",
+    "descripcion": "Se constituye un plazo fijo por $500.000 debitando la cuenta corriente bancaria",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Plazo fijo (A+), baja Banco (A-). Solo varía la composición del activo financiero; el PN no varía.",
+    "cuentas_involucradas": ["Plazo fijo", "Banco"]
+  },
+  {
+    "id": "t012",
+    "descripcion": "Vence un plazo fijo por $500.000 y se acredita el capital sin intereses en la cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Plazo fijo (A-). No se generan resultados; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Plazo fijo"]
+  },
+  {
+    "id": "t013",
+    "descripcion": "Se emiten documentos a pagar por $680.000 a favor de un proveedor para cancelar la deuda comercial",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Documentos a pagar (P+), baja Proveedores (P-). Se recompone el pasivo sin alterar el PN.",
+    "cuentas_involucradas": ["Documentos a pagar", "Proveedores"]
+  },
+  {
+    "id": "t014",
+    "descripcion": "Un cliente cancela su deuda entregando un pagaré por $240.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Documentos a cobrar (A+), baja Clientes (A-). Solo cambia la forma del activo; el PN no varía.",
+    "cuentas_involucradas": ["Documentos a cobrar", "Clientes"]
+  },
+  {
+    "id": "t015",
+    "descripcion": "Se cobra un pagaré de $240.000 al vencimiento en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Documentos a cobrar (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Documentos a cobrar"]
+  },
+  {
+    "id": "t016",
+    "descripcion": "El socio Martínez realiza un aporte de capital de $2.000.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), sube Capital (PN+). El Patrimonio Neto aumenta, pero no por resultado sino por aporte de dueños. Se considera permutativo porque el PN no cambia por efecto de resultados.",
+    "cuentas_involucradas": ["Caja", "Capital"]
+  },
+  {
+    "id": "t017",
+    "descripcion": "El socio Fernández aporta un vehículo valuado en $1.800.000 como integración de capital",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Rodados (A+), sube Capital (PN+). El aporte en especie incrementa el activo y el PN en igual medida sin generar resultado.",
+    "cuentas_involucradas": ["Rodados", "Capital"]
+  },
+  {
+    "id": "t018",
+    "descripcion": "Se compra insumos de librería por $45.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Insumos de oficina (A+), baja Caja (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Insumos de oficina", "Caja"]
+  },
+  {
+    "id": "t019",
+    "descripcion": "Se adquieren materias primas por $920.000 con pago a 60 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Materias primas (A+), sube Proveedores (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Materias primas", "Proveedores"]
+  },
+  {
+    "id": "t020",
+    "descripcion": "Se paga la deuda con un proveedor de $920.000 mediante transferencia bancaria",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Proveedores (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Proveedores"]
+  },
+  {
+    "id": "t021",
+    "descripcion": "Se renegocia con un banco y se convierte un préstamo a corto plazo de $800.000 en préstamo a largo plazo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Préstamos bancarios corto plazo (P-), sube Préstamos bancarios largo plazo (P+). Solo varía la composición del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Préstamos bancarios CP", "Préstamos bancarios LP"]
+  },
+  {
+    "id": "t022",
+    "descripcion": "Se compra un inmueble para la empresa por $15.000.000 entregando $5.000.000 al contado y el resto con hipoteca",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Inmuebles (A+), baja Caja (A-), sube Hipoteca a pagar (P+). El incremento neto del activo es igual al incremento del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Inmuebles", "Caja", "Hipoteca a pagar"]
+  },
+  {
+    "id": "t023",
+    "descripcion": "Se paga una cuota hipotecaria de $180.000 desde cuenta bancaria (solo capital)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Hipoteca a pagar (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Hipoteca a pagar"]
+  },
+  {
+    "id": "t024",
+    "descripcion": "Se cobra un cheque de $320.000 de un cliente y se deposita en el banco",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Clientes (A-). Solo varía la forma del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Clientes"]
+  },
+  {
+    "id": "t025",
+    "descripcion": "Se compra mobiliario de oficina por $260.000 a crédito a 45 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Muebles y útiles (A+), sube Proveedores (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Muebles y útiles", "Proveedores"]
+  },
+  {
+    "id": "t026",
+    "descripcion": "Se recibe mercadería en consignación valuada en $400.000 (la empresa no es dueña aún)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías en consignación (A+), sube Consignantes (P+). El PN no varía ya que la empresa asume la obligación de rendir cuentas.",
+    "cuentas_involucradas": ["Mercaderías en consignación", "Consignantes"]
+  },
+  {
+    "id": "t027",
+    "descripcion": "Se depositan $750.000 en una cuenta corriente bancaria provenientes de caja",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Caja (A-). Movimiento interno del activo disponible; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Caja"]
+  },
+  {
+    "id": "t028",
+    "descripcion": "Se obtiene un anticipo de un cliente por $600.000 por un pedido futuro",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), sube Anticipos de clientes (P+). El anticipo es un pasivo hasta entregar el bien; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Anticipos de clientes"]
+  },
+  {
+    "id": "t029",
+    "descripcion": "Se paga un anticipo a un proveedor por $280.000 para asegurar la entrega de insumos",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Anticipos a proveedores (A+), baja Caja (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Anticipos a proveedores", "Caja"]
+  },
+  {
+    "id": "t030",
+    "descripcion": "Se recibe la mercadería del proveedor y se aplica el anticipo de $280.000 pagado anteriormente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), baja Anticipos a proveedores (A-). Solo cambia la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Anticipos a proveedores"]
+  },
+  {
+    "id": "t031",
+    "descripcion": "Se paga a un proveedor $560.000 mediante transferencia electrónica de fondos",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Proveedores (P-). El Activo y el Pasivo se reducen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Proveedores"]
+  },
+  {
+    "id": "t032",
+    "descripcion": "El Banco Galicia otorga un préstamo personal a la empresa por $3.000.000 acreditado en cuenta",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Préstamos bancarios (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos bancarios"]
+  },
+  {
+    "id": "t033",
+    "descripcion": "Se adquiere mercadería importada por $1.200.000 con pago diferido a 90 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), sube Proveedores del exterior (P+). El PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Proveedores del exterior"]
+  },
+  {
+    "id": "t034",
+    "descripcion": "Se cobra a un cliente mediante depósito bancario $88.000 adeudados por facturas anteriores",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Clientes (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Clientes"]
+  },
+  {
+    "id": "t035",
+    "descripcion": "Se cancelan $380.000 de Documentos a pagar mediante débito en cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Documentos a pagar (P-). El Activo y el Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Documentos a pagar"]
+  },
+  {
+    "id": "t036",
+    "descripcion": "Se compra un terreno para ampliación de planta por $8.500.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Terrenos (A+), baja Caja/Banco (A-). Solo varía la composición del activo no corriente; el PN no varía.",
+    "cuentas_involucradas": ["Terrenos", "Banco"]
+  },
+  {
+    "id": "t037",
+    "descripcion": "Se transfiere el saldo de resultados acumulados a reserva legal por $450.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Resultados acumulados (PN-), sube Reserva legal (PN+). Solo se recompone la estructura del PN; el total no varía.",
+    "cuentas_involucradas": ["Resultados acumulados", "Reserva legal"]
+  },
+  {
+    "id": "t038",
+    "descripcion": "Se constituye una garantía locativa depositando $120.000 en una cuenta especial del banco",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Depósito en garantía (A+), baja Banco (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Depósito en garantía", "Banco"]
+  },
+  {
+    "id": "t039",
+    "descripcion": "Se devuelve la garantía locativa de $120.000 al finalizar el contrato",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Depósito en garantía (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Depósito en garantía"]
+  },
+  {
+    "id": "t040",
+    "descripcion": "Se paga un préstamo de $700.000 solicitado a accionistas (sin intereses)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Préstamos de accionistas (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos de accionistas"]
+  },
+  {
+    "id": "t041",
+    "descripcion": "Un accionista presta $700.000 a la empresa sin intereses, acreditado en banco",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Préstamos de accionistas (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos de accionistas"]
+  },
+  {
+    "id": "t042",
+    "descripcion": "Se adquieren acciones de otra empresa para inversión permanente por $950.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Inversiones en acciones (A+), baja Banco (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Inversiones en acciones", "Banco"]
+  },
+  {
+    "id": "t043",
+    "descripcion": "Se entrega mercadería a un cliente en canje por publicidad recibida, valuada en $75.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Mercaderías (A-), baja Publicidad pagada por adelantado / Crédito por publicidad (A-). Es un intercambio de activos; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Publicidad pagada por adelantado"]
+  },
+  {
+    "id": "t044",
+    "descripcion": "Se pagan $220.000 a un proveedor de materiales con cheque de pago diferido",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Cheques diferidos emitidos (P+), baja Proveedores (P-). Solo varía la composición del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Cheques diferidos emitidos", "Proveedores"]
+  },
+  {
+    "id": "t045",
+    "descripcion": "Se cobra un cheque diferido de $310.000 recibido de un cliente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Cheques diferidos a cobrar (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Cheques diferidos a cobrar"]
+  },
+  {
+    "id": "t046",
+    "descripcion": "Se compra mercadería por $640.000 pagando el 50% al contado y el resto a 30 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), baja Caja (A-) en $320.000, sube Proveedores (P+) en $320.000. El incremento neto del activo iguala al incremento del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Caja", "Proveedores"]
+  },
+  {
+    "id": "t047",
+    "descripcion": "Se adquiere una impresora industrial por $780.000 en 6 cuotas sin interés",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Maquinaria y equipo (A+), sube Proveedores / Cuentas a pagar (P+). El PN no varía.",
+    "cuentas_involucradas": ["Maquinaria y equipo", "Proveedores"]
+  },
+  {
+    "id": "t048",
+    "descripcion": "Se realizan gastos de instalación pagados en efectivo $65.000 que se activan",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Gastos de instalación (A+), baja Caja (A-). El gasto se activa como intangible; el PN no varía.",
+    "cuentas_involucradas": ["Gastos de instalación", "Caja"]
+  },
+  {
+    "id": "t049",
+    "descripcion": "Se compra mercadería por $1.050.000 entregando como parte de pago un bien de uso valuado en $450.000 y el resto en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), baja bien de uso (A-) en $450.000, baja Caja (A-) en $600.000. Intercambio de activos; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Rodados", "Caja"]
+  },
+  {
+    "id": "t050",
+    "descripcion": "Se obtiene un crédito fiscal (saldo a favor de IVA) por $180.000 al comprar mercadería",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube IVA crédito fiscal (A+), sube Proveedores (P+) o baja Caja (A-). Es un componente de la compra; el PN no varía.",
+    "cuentas_involucradas": ["IVA crédito fiscal", "Caja"]
+  },
+  {
+    "id": "t051",
+    "descripcion": "Se recibe la devolución de un anticipo entregado a un proveedor por $150.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Anticipos a proveedores (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Anticipos a proveedores"]
+  },
+  {
+    "id": "t052",
+    "descripcion": "Se paga el anticipo de un cliente por $600.000 entregando la mercadería correspondiente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Anticipos de clientes (P-), baja Mercaderías (A-). El pasivo y el activo se reducen en igual medida; el PN no varía. (La venta se registra por separado.)",
+    "cuentas_involucradas": ["Anticipos de clientes", "Mercaderías"]
+  },
+  {
+    "id": "t053",
+    "descripcion": "Se adquiere un software de gestión por $390.000 al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Intangibles / Software (A+), baja Caja (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Intangibles (Software)", "Caja"]
+  },
+  {
+    "id": "t054",
+    "descripcion": "Se cancela totalmente la hipoteca sobre un inmueble por $4.200.000 mediante transferencia bancaria",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Hipoteca a pagar (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Hipoteca a pagar"]
+  },
+  {
+    "id": "t055",
+    "descripcion": "Se compra mercadería por $290.000 a crédito y se emite documentos a pagar por el total",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Mercaderías (A+), sube Documentos a pagar (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Documentos a pagar"]
+  },
+  {
+    "id": "t056",
+    "descripcion": "Se acredita en banco el cobro de un documento a cobrar de $240.000 al vencimiento",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Documentos a cobrar (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Documentos a cobrar"]
+  },
+  {
+    "id": "t057",
+    "descripcion": "La empresa retira $90.000 de la cuenta bancaria para caja chica",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja chica (A+), baja Banco (A-). Solo varía la composición del activo disponible; el PN no varía.",
+    "cuentas_involucradas": ["Caja chica", "Banco"]
+  },
+  {
+    "id": "t058",
+    "descripcion": "Se amplía el capital social con aportes en efectivo de los socios por $5.000.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Capital (PN+). El PN aumenta por aporte de dueños, no por resultado. Se clasifica como permutativo.",
+    "cuentas_involucradas": ["Banco", "Capital"]
+  },
+  {
+    "id": "t059",
+    "descripcion": "Se paga el saldo de IVA a la AFIP por $215.000 mediante débito bancario",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja IVA débito fiscal / IVA a pagar (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "IVA a pagar"]
+  },
+  {
+    "id": "t060",
+    "descripcion": "Se compran envases retornables por $130.000 al contado para uso en distribución",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Envases retornables (A+), baja Caja (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Envases retornables", "Caja"]
+  },
+  {
+    "id": "t061",
+    "descripcion": "Un cliente devuelve envases retornables y recupera el depósito de $45.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Envases retornables (A+), baja Caja (A-) o baja Depósito por envases (P-). Solo varía la composición del activo/pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Envases retornables", "Depósito por envases"]
+  },
+  {
+    "id": "t062",
+    "descripcion": "Se paga la deuda con AFIP por retenciones de empleados (SUSS) por $185.000 mediante débito bancario",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Retenciones a depositar (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Retenciones a depositar"]
+  },
+  {
+    "id": "t063",
+    "descripcion": "Se obtiene financiamiento de $2.500.000 mediante emisión de obligaciones negociables colocadas en el mercado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Obligaciones negociables (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Obligaciones negociables"]
+  },
+  {
+    "id": "t064",
+    "descripcion": "Se paga $370.000 de deudas con empleados (sueldos a pagar) que se habían devengado el mes anterior",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Sueldos a pagar (P-). El gasto ya se registró; ahora solo se cancela el pasivo. El PN no varía.",
+    "cuentas_involucradas": ["Banco", "Sueldos a pagar"]
+  },
+  {
+    "id": "t065",
+    "descripcion": "Se paga $92.000 de retenciones de ganancias de empleados acumuladas del mes",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Retenciones a pagar (P-). El PN no varía; solo se cancela el pasivo ya registrado.",
+    "cuentas_involucradas": ["Banco", "Retenciones a pagar"]
+  },
+  {
+    "id": "t066",
+    "descripcion": "Se cobra $500.000 de un cliente al que se le había emitido una nota de débito por mora el período anterior",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Clientes / Deudores por mora (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Clientes"]
+  },
+  {
+    "id": "t067",
+    "descripcion": "Se deposita en un fondo de inversión de liquidez inmediata $1.000.000 provenientes de la cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Inversiones transitorias (A+), baja Banco (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Inversiones transitorias", "Banco"]
+  },
+  {
+    "id": "t068",
+    "descripcion": "Se cancela una deuda con proveedor de $660.000 entregando un cheque de pago diferido a 30 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Proveedores (P-), sube Cheques diferidos emitidos (P+). Solo varía la composición del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Proveedores", "Cheques diferidos emitidos"]
+  },
+  {
+    "id": "t069",
+    "descripcion": "Se recibe un cheque diferido de $410.000 de un cliente como forma de pago de su cuenta corriente",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Cheques diferidos a cobrar (A+), baja Clientes (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Cheques diferidos a cobrar", "Clientes"]
+  },
+  {
+    "id": "t070",
+    "descripcion": "La empresa recibe en préstamo $1.800.000 de otra empresa del grupo (sin intereses) acreditado en banco",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), sube Préstamos de empresas vinculadas (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos de empresas vinculadas"]
+  },
+  {
+    "id": "t071",
+    "descripcion": "Se paga $1.800.000 a empresa vinculada cancelando el préstamo intercompany",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Préstamos de empresas vinculadas (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Préstamos de empresas vinculadas"]
+  },
+  {
+    "id": "t072",
+    "descripcion": "Se pagan $48.000 de alquiler adelantado (6 meses por adelantado) que se activan como prepago",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Alquileres pagados por adelantado (A+), baja Banco (A-). El gasto no se registra aún; el PN no varía.",
+    "cuentas_involucradas": ["Alquileres pagados por adelantado", "Banco"]
+  },
+  {
+    "id": "t073",
+    "descripcion": "Se pagan $36.000 de seguro adelantado (póliza anual) que se activan como prepago",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Seguros pagados por adelantado (A+), baja Banco (A-). El gasto no se devenga aún; el PN no varía.",
+    "cuentas_involucradas": ["Seguros pagados por adelantado", "Banco"]
+  },
+  {
+    "id": "t074",
+    "descripcion": "Se compran 1.000 acciones de Grupo Financiero Galicia en bolsa por $840.000 con fines especulativos",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Inversiones en acciones (A+), baja Banco (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Inversiones en acciones", "Banco"]
+  },
+  {
+    "id": "t075",
+    "descripcion": "Se paga una multa de tránsito del rodado empresarial por $28.000 con fondos de caja chica (imputada como deuda a pagar previamente)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Caja chica (A-), baja Multas a pagar (P-). Solo se cancela el pasivo ya registrado; el PN no varía.",
+    "cuentas_involucradas": ["Caja chica", "Multas a pagar"]
+  },
+  {
+    "id": "t076",
+    "descripcion": "Se cobra $195.000 de un cliente mediante transferencia, de una factura que estaba en gestión de cobro",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Clientes (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Clientes"]
+  },
+  {
+    "id": "t077",
+    "descripcion": "Se entrega como aporte inicial a la sociedad un inmueble avaluado en $12.000.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Inmuebles (A+), sube Capital (PN+). El aporte en especie no genera resultado; el PN crece por contribución de dueños.",
+    "cuentas_involucradas": ["Inmuebles", "Capital"]
+  },
+  {
+    "id": "t078",
+    "descripcion": "Se cobra $760.000 a un cliente que había pagado con cheque en gestión de cobro bancario",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Valores a depositar (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Valores a depositar"]
+  },
+  {
+    "id": "t079",
+    "descripcion": "Se paga el impuesto a los sellos de un contrato de locación por $14.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Caja (A-), baja Impuesto a los sellos a pagar (P-). Solo se cancela el pasivo ya registrado; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Impuesto a los sellos a pagar"]
+  },
+  {
+    "id": "t080",
+    "descripcion": "Se transfieren $330.000 de la reserva facultativa a resultados no asignados para financiar la operación",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Reserva facultativa (PN-), sube Resultados no asignados (PN+). Solo varía la composición del PN; el total no varía.",
+    "cuentas_involucradas": ["Reserva facultativa", "Resultados no asignados"]
+  },
+  {
+    "id": "t081",
+    "descripcion": "Se refinancia una deuda con proveedor de $1.100.000 convirtiéndola en un préstamo bancario a 12 meses",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Proveedores (P-), sube Préstamos bancarios (P+). Solo varía la composición del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Proveedores", "Préstamos bancarios"]
+  },
+  {
+    "id": "t082",
+    "descripcion": "Se recibe un crédito fiscal de IVA por $96.000 al comprar bienes de uso al contado",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube IVA crédito fiscal (A+), baja Banco (A-). El crédito fiscal es un activo financiero; el PN no varía.",
+    "cuentas_involucradas": ["IVA crédito fiscal", "Banco"]
+  },
+  {
+    "id": "t083",
+    "descripcion": "Se adquieren títulos públicos por $2.000.000 como inversión transitoria, debitando cuenta bancaria",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Títulos públicos (A+), baja Banco (A-). Solo varía la composición del activo financiero; el PN no varía.",
+    "cuentas_involucradas": ["Títulos públicos", "Banco"]
+  },
+  {
+    "id": "t084",
+    "descripcion": "Se venden los títulos públicos adquiridos por $2.000.000 al mismo precio de costo (sin ganancia ni pérdida)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Títulos públicos (A-). Al no haber diferencia de precio no hay resultado; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Títulos públicos"]
+  },
+  {
+    "id": "t085",
+    "descripcion": "Se cancela el IVA débito fiscal de $310.000 con el IVA crédito fiscal acumulado de $310.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja IVA débito fiscal (P-), baja IVA crédito fiscal (A-). Se compensan cuentas del mismo impuesto; el PN no varía.",
+    "cuentas_involucradas": ["IVA débito fiscal", "IVA crédito fiscal"]
+  },
+  {
+    "id": "t086",
+    "descripcion": "Se compran repuestos para maquinaria por $72.000 al contado para stock de mantenimiento",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Repuestos y accesorios (A+), baja Caja (A-). Solo varía la composición del activo; el PN no varía.",
+    "cuentas_involucradas": ["Repuestos y accesorios", "Caja"]
+  },
+  {
+    "id": "t087",
+    "descripcion": "Se devuelve mercadería con defectos al proveedor valuada en $185.000 y se acredita a cuenta corriente proveedores",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Mercaderías (A-), baja Proveedores (P-). El activo y el pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Mercaderías", "Proveedores"]
+  },
+  {
+    "id": "t088",
+    "descripcion": "Se realiza un endoso de un pagaré a cobrar de $275.000 para cancelar una deuda con proveedor",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Documentos a cobrar (A-), baja Proveedores (P-). Activo y pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Documentos a cobrar", "Proveedores"]
+  },
+  {
+    "id": "t089",
+    "descripcion": "Se contabiliza el IVA débito fiscal de $420.000 generado en las ventas del mes (como contrapartida del pasivo ya registrado)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube IVA débito fiscal (P+), el crédito es la cuenta de ventas — pero en este asiento solo se refleja el IVA; el PN no varía.",
+    "cuentas_involucradas": ["IVA débito fiscal", "IVA a pagar"]
+  },
+  {
+    "id": "t090",
+    "descripcion": "Se paga la cuota mensual de un leasing de maquinaria por $145.000 (solo capital, sin intereses)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Leasing a pagar (P-). Solo se cancela el pasivo financiero; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Leasing a pagar"]
+  },
+  {
+    "id": "t091",
+    "descripcion": "Se recibe un adelanto de honorarios de un cliente profesional por $80.000 en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), sube Anticipos de clientes (P+). El anticipo es un pasivo; el PN no varía hasta prestar el servicio.",
+    "cuentas_involucradas": ["Caja", "Anticipos de clientes"]
+  },
+  {
+    "id": "t092",
+    "descripcion": "Se adquieren materiales de construcción para una obra en curso por $2.100.000 a crédito",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Obras en curso (A+), sube Proveedores (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Obras en curso", "Proveedores"]
+  },
+  {
+    "id": "t093",
+    "descripcion": "Se cancela $850.000 de deuda bancaria con saldo de plazo fijo vencido",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Plazo fijo (A-), baja Préstamos bancarios (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Plazo fijo", "Préstamos bancarios"]
+  },
+  {
+    "id": "t094",
+    "descripcion": "Se regulariza el anticipo de clientes de $600.000 entregando la mercadería comprometida",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Anticipos de clientes (P-), sube Ventas (la venta se registra aparte); aquí solo se cancela el pasivo contra la mercadería entregada. El PN no varía en este asiento.",
+    "cuentas_involucradas": ["Anticipos de clientes", "Mercaderías"]
+  },
+  {
+    "id": "t095",
+    "descripcion": "Se convierte deuda con proveedor de $720.000 en un pagaré firmado a 60 días",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Proveedores (P-), sube Documentos a pagar (P+). Solo varía la composición del pasivo; el PN no varía.",
+    "cuentas_involucradas": ["Proveedores", "Documentos a pagar"]
+  },
+  {
+    "id": "t096",
+    "descripcion": "Se paga $480.000 de deuda al ANSES (aportes patronales devengados el mes anterior)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Cargas sociales a pagar (P-). Solo se cancela el pasivo ya registrado; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Cargas sociales a pagar"]
+  },
+  {
+    "id": "t097",
+    "descripcion": "Se vende un rodado al mismo precio de libros de $1.800.000 cobrando en efectivo",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Rodados (A-). No hay ganancia ni pérdida; el PN no varía.",
+    "cuentas_involucradas": ["Caja", "Rodados"]
+  },
+  {
+    "id": "t098",
+    "descripcion": "Se adquieren materias primas por $770.000 pagando con tarjeta de crédito corporativa",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Materias primas (A+), sube Tarjeta de crédito a pagar (P+). Activo y Pasivo crecen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Materias primas", "Tarjeta de crédito a pagar"]
+  },
+  {
+    "id": "t099",
+    "descripcion": "Se paga la tarjeta de crédito corporativa de $770.000 mediante débito bancario",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Tarjeta de crédito a pagar (P-). Activo y Pasivo disminuyen en igual medida; el PN no varía.",
+    "cuentas_involucradas": ["Banco", "Tarjeta de crédito a pagar"]
+  },
+  {
+    "id": "t100",
+    "descripcion": "Se trasladó la maquinaria de planta vieja a la nueva instalación; se actualizó el valor de libros sin cambio de precio ($3.400.000)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Maquinaria planta A (A-), sube Maquinaria planta B (A+). Solo varía la clasificación interna del activo; el PN no varía.",
+    "cuentas_involucradas": ["Maquinaria planta A", "Maquinaria planta B"]
+  },
+  {
+    "id": "t101",
+    "descripcion": "Se venden mercaderías al contado por $780.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ventas (resultado positivo). El PN aumenta por el ingreso generado.",
+    "cuentas_involucradas": ["Caja", "Ventas"]
+  },
+  {
+    "id": "t102",
+    "descripcion": "Se venden mercaderías a crédito por $1.250.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Ventas (resultado positivo). El PN aumenta por el ingreso reconocido.",
+    "cuentas_involucradas": ["Clientes", "Ventas"]
+  },
+  {
+    "id": "t103",
+    "descripcion": "Se registra el costo de la mercadería vendida (CMV) por $520.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Baja Mercaderías (A-), sube CMV (resultado negativo). El PN disminuye por el gasto reconocido.",
+    "cuentas_involucradas": ["CMV", "Mercaderías"]
+  },
+  {
+    "id": "t104",
+    "descripcion": "Se prestan servicios de consultoría cobrados en efectivo por $340.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ingresos por servicios (resultado positivo). El PN aumenta por el ingreso generado.",
+    "cuentas_involucradas": ["Caja", "Ingresos por servicios"]
+  },
+  {
+    "id": "t105",
+    "descripcion": "Se prestan servicios de asesoramiento pendientes de cobro por $490.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes / Deudores por servicios (A+), sube Ingresos por servicios (resultado positivo). El PN aumenta por el ingreso devengado.",
+    "cuentas_involucradas": ["Clientes", "Ingresos por servicios"]
+  },
+  {
+    "id": "t106",
+    "descripcion": "Se devengan intereses ganados por un plazo fijo de $42.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Intereses a cobrar (A+), sube Intereses ganados (resultado positivo). El PN aumenta por el resultado financiero positivo.",
+    "cuentas_involucradas": ["Intereses a cobrar", "Intereses ganados"]
+  },
+  {
+    "id": "t107",
+    "descripcion": "Se cobran intereses de plazo fijo vencido por $42.000",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Banco (A+), baja Intereses a cobrar (A-). El resultado ya se registró al devengar; aquí solo varía la composición del activo. El PN no varía.",
+    "cuentas_involucradas": ["Banco", "Intereses a cobrar"]
+  },
+  {
+    "id": "t108",
+    "descripcion": "Se devenga el alquiler mensual de un local comercial dado en arrendamiento por $95.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Alquileres a cobrar (A+), sube Alquileres ganados (resultado positivo). El PN aumenta por el ingreso devengado.",
+    "cuentas_involucradas": ["Alquileres a cobrar", "Alquileres ganados"]
+  },
+  {
+    "id": "t109",
+    "descripcion": "Un proveedor otorga un descuento comercial de $38.000 sobre facturas pendientes",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Baja Proveedores (P-), sube Descuentos obtenidos (resultado positivo). El PN aumenta porque la deuda se reduce sin disminuir el activo.",
+    "cuentas_involucradas": ["Proveedores", "Descuentos obtenidos"]
+  },
+  {
+    "id": "t110",
+    "descripcion": "Se recupera un crédito que había sido dado de baja como incobrable por $85.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Recupero de deudores incobrables (resultado positivo). El PN aumenta por el ingreso extraordinario recuperado.",
+    "cuentas_involucradas": ["Clientes", "Recupero de deudores incobrables"]
+  },
+  {
+    "id": "t111",
+    "descripcion": "Se devenga una diferencia de cambio positiva de $120.000 en una deuda en dólares que bajó de cotización",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Baja Deuda en moneda extranjera (P-), sube Diferencia de cambio positiva (resultado positivo). El PN aumenta por el resultado cambiario.",
+    "cuentas_involucradas": ["Deuda en moneda extranjera", "Diferencia de cambio positiva"]
+  },
+  {
+    "id": "t112",
+    "descripcion": "Se vende un rodado con un precio de venta de $2.500.000 siendo su valor libros $1.800.000; se cobra en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+) en $2.500.000, baja Rodados (A-) en $1.800.000, sube Utilidad en venta de bien de uso (resultado positivo) en $700.000. El PN aumenta por la ganancia.",
+    "cuentas_involucradas": ["Caja", "Rodados", "Utilidad en venta de bien de uso"]
+  },
+  {
+    "id": "t113",
+    "descripcion": "Se cobran dividendos en efectivo de $210.000 por una inversión en acciones de YPF S.A.",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Dividendos cobrados (resultado positivo). El PN aumenta por el ingreso financiero.",
+    "cuentas_involucradas": ["Caja", "Dividendos cobrados"]
+  },
+  {
+    "id": "t114",
+    "descripcion": "Se recibe una donación en efectivo de $500.000 de un proveedor estratégico",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Donaciones recibidas (resultado positivo). El PN aumenta sin contrapartida de activo entregado.",
+    "cuentas_involucradas": ["Caja", "Donaciones recibidas"]
+  },
+  {
+    "id": "t115",
+    "descripcion": "Se venden mercaderías por $3.800.000 al contado",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ventas (resultado positivo). El PN aumenta por el ingreso generado.",
+    "cuentas_involucradas": ["Caja", "Ventas"]
+  },
+  {
+    "id": "t116",
+    "descripcion": "Se venden servicios de mantenimiento a crédito por $670.000 a la empresa Metalúrgica del Sur S.A.",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Ingresos por servicios (resultado positivo). El PN aumenta por el ingreso reconocido.",
+    "cuentas_involucradas": ["Clientes", "Ingresos por servicios"]
+  },
+  {
+    "id": "t117",
+    "descripcion": "Se cobra el alquiler mensual de $95.000 que estaba devengado (Alquileres a cobrar)",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Sube Caja (A+), baja Alquileres a cobrar (A-). El resultado ya se registró al devengar; aquí solo varía la composición del activo. El PN no varía.",
+    "cuentas_involucradas": ["Caja", "Alquileres a cobrar"]
+  },
+  {
+    "id": "t118",
+    "descripcion": "Se devenga diferencia de cambio positiva de $67.000 en crédito en dólares a cliente del exterior",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Diferencia de cambio positiva (resultado positivo). El PN aumenta por el resultado cambiario.",
+    "cuentas_involucradas": ["Clientes", "Diferencia de cambio positiva"]
+  },
+  {
+    "id": "t119",
+    "descripcion": "Se venden acciones de cartera por $1.100.000 siendo su costo de $850.000; diferencia cobrada en banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+) en $1.100.000, baja Inversiones en acciones (A-) en $850.000, sube Resultado por venta de inversiones (resultado positivo) en $250.000. El PN aumenta.",
+    "cuentas_involucradas": ["Banco", "Inversiones en acciones", "Resultado por venta de inversiones"]
+  },
+  {
+    "id": "t120",
+    "descripcion": "Se factura consultoría fiscal a Construcciones Andinas S.R.L. por $280.000 a cobrar en 15 días",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Ingresos por honorarios (resultado positivo). El PN aumenta por el ingreso devengado.",
+    "cuentas_involucradas": ["Clientes", "Ingresos por honorarios"]
+  },
+  {
+    "id": "t121",
+    "descripcion": "Se actualiza el valor de un título público en cartera con una ganancia de $55.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Títulos públicos (A+), sube Resultado por tenencia (resultado positivo). El PN aumenta por el resultado financiero.",
+    "cuentas_involucradas": ["Títulos públicos", "Resultado por tenencia"]
+  },
+  {
+    "id": "t122",
+    "descripcion": "Se devenga interés ganado de $18.000 en un préstamo otorgado a un empleado",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Intereses a cobrar (A+), sube Intereses ganados (resultado positivo). El PN aumenta por el resultado financiero.",
+    "cuentas_involucradas": ["Intereses a cobrar", "Intereses ganados"]
+  },
+  {
+    "id": "t123",
+    "descripcion": "Se recibe nota de crédito del proveedor por $29.000 por bonificación por volumen",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Baja Proveedores (P-), sube Descuentos y bonificaciones obtenidos (resultado positivo). El PN aumenta.",
+    "cuentas_involucradas": ["Proveedores", "Descuentos y bonificaciones obtenidos"]
+  },
+  {
+    "id": "t124",
+    "descripcion": "Se venden mercaderías a crédito a Supermercados Norte S.A. por $4.200.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Ventas (resultado positivo). El PN aumenta por el ingreso reconocido.",
+    "cuentas_involucradas": ["Clientes", "Ventas"]
+  },
+  {
+    "id": "t125",
+    "descripcion": "Se devenga renta de un bono en cartera por $32.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Rentas devengadas a cobrar (A+), sube Intereses ganados (resultado positivo). El PN aumenta.",
+    "cuentas_involucradas": ["Rentas devengadas a cobrar", "Intereses ganados"]
+  },
+  {
+    "id": "t126",
+    "descripcion": "Se vende maquinaria con una utilidad de $380.000; se cobra en banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+), baja Maquinaria (A-), sube Utilidad en venta de bien de uso (resultado positivo). El PN aumenta por la ganancia.",
+    "cuentas_involucradas": ["Banco", "Maquinaria", "Utilidad en venta de bien de uso"]
+  },
+  {
+    "id": "t127",
+    "descripcion": "Se cobran comisiones por intermediación en una operación inmobiliaria por $620.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Comisiones ganadas (resultado positivo). El PN aumenta por el ingreso.",
+    "cuentas_involucradas": ["Caja", "Comisiones ganadas"]
+  },
+  {
+    "id": "t128",
+    "descripcion": "Se factura alquiler de depósito a Distribuidora Pampeana S.A. por $130.000 a cobrar el 5 del mes siguiente",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Alquileres a cobrar (A+), sube Alquileres ganados (resultado positivo). El PN aumenta por el ingreso devengado.",
+    "cuentas_involucradas": ["Alquileres a cobrar", "Alquileres ganados"]
+  },
+  {
+    "id": "t129",
+    "descripcion": "Se devenga una diferencia de cambio positiva de $89.000 en una inversión en dólares",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Inversiones en moneda extranjera (A+), sube Diferencia de cambio positiva (resultado positivo). El PN aumenta.",
+    "cuentas_involucradas": ["Inversiones en moneda extranjera", "Diferencia de cambio positiva"]
+  },
+  {
+    "id": "t130",
+    "descripcion": "Se recuperan $47.000 de un deudor incobrable que había sido dado de baja mediante cheque",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+), sube Recupero de deudores incobrables (resultado positivo). El PN aumenta por el ingreso inesperado.",
+    "cuentas_involucradas": ["Banco", "Recupero de deudores incobrables"]
+  },
+  {
+    "id": "t131",
+    "descripcion": "Se venden productos terminados al contado a Ferretería El Torno S.R.L. por $960.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ventas (resultado positivo). El PN aumenta por el ingreso generado.",
+    "cuentas_involucradas": ["Caja", "Ventas"]
+  },
+  {
+    "id": "t132",
+    "descripcion": "Se devenga una subvención gubernamental recibida por $200.000 como ingreso no operativo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Subsidios a cobrar (A+), sube Ingresos por subsidios (resultado positivo). El PN aumenta.",
+    "cuentas_involucradas": ["Subsidios a cobrar", "Ingresos por subsidios"]
+  },
+  {
+    "id": "t133",
+    "descripcion": "Se cobra diferencia de precios por un reajuste de contrato a favor de la empresa por $74.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ingresos varios (resultado positivo). El PN aumenta por el ingreso extraordinario.",
+    "cuentas_involucradas": ["Caja", "Ingresos varios"]
+  },
+  {
+    "id": "t134",
+    "descripcion": "Se devengan $22.000 de intereses ganados sobre saldo de cuenta corriente bancaria remunerada",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+), sube Intereses ganados (resultado positivo). El PN aumenta por el resultado financiero.",
+    "cuentas_involucradas": ["Banco", "Intereses ganados"]
+  },
+  {
+    "id": "t135",
+    "descripcion": "La empresa vende un inmueble en desuso obteniendo una utilidad de $1.200.000; cobra en banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+), baja Inmuebles (A-), sube Utilidad en venta de bien de uso (resultado positivo). El PN aumenta por la ganancia.",
+    "cuentas_involucradas": ["Banco", "Inmuebles", "Utilidad en venta de bien de uso"]
+  },
+  {
+    "id": "t136",
+    "descripcion": "Se prestan servicios de transporte facturados al contado por $185.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Caja (A+), sube Ingresos por servicios (resultado positivo). El PN aumenta por el ingreso.",
+    "cuentas_involucradas": ["Caja", "Ingresos por servicios"]
+  },
+  {
+    "id": "t137",
+    "descripcion": "Se actualiza el valor de una propiedad de inversión y se reconoce una ganancia de $850.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Propiedad de inversión (A+), sube Ganancia por valuación a valor razonable (resultado positivo). El PN aumenta.",
+    "cuentas_involucradas": ["Propiedad de inversión", "Ganancia por valuación a valor razonable"]
+  },
+  {
+    "id": "t138",
+    "descripcion": "Se devenga el alquiler cobrado por adelantado de $48.000 correspondiente al mes actual",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Baja Alquileres cobrados por adelantado (P-), sube Alquileres ganados (resultado positivo). El PN aumenta por el ingreso devengado.",
+    "cuentas_involucradas": ["Alquileres cobrados por adelantado", "Alquileres ganados"]
+  },
+  {
+    "id": "t139",
+    "descripcion": "Se factura asesoría impositiva a Agro San Luis S.A. por $310.000 con vencimiento a 30 días",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Clientes (A+), sube Ingresos por honorarios (resultado positivo). El PN aumenta por el ingreso reconocido.",
+    "cuentas_involucradas": ["Clientes", "Ingresos por honorarios"]
+  },
+  {
+    "id": "t140",
+    "descripcion": "Se venden al contado mercaderías con descuento neto de $55.000 por volumen cobrado en banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_positivo",
+    "explicacion": "Sube Banco (A+), sube Ventas netas (resultado positivo). El PN aumenta por el ingreso, neto de descuentos.",
+    "cuentas_involucradas": ["Banco", "Ventas"]
+  },
+  {
+    "id": "t141",
+    "descripcion": "Se devuelven dividendos cobrados en exceso, reintegrando $18.000 al banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Baja Banco (A-), baja Dividendos cobrados (resultado negativo). El PN disminuye al revertirse el ingreso.",
+    "cuentas_involucradas": ["Banco", "Dividendos cobrados"]
+  },
+  {
+    "id": "t142",
+    "descripcion": "Se devenga el CMV de mercaderías vendidas por $610.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube CMV (resultado negativo), baja Mercaderías (A-). El PN disminuye por el costo reconocido.",
+    "cuentas_involucradas": ["CMV", "Mercaderías"]
+  },
+  {
+    "id": "t143",
+    "descripcion": "Se pagan sueldos del mes por $420.000 desde la cuenta bancaria",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos en personal / Sueldos (resultado negativo), baja Banco (A-). El PN disminuye por el gasto registrado.",
+    "cuentas_involucradas": ["Sueldos y jornales", "Banco"]
+  },
+  {
+    "id": "t144",
+    "descripcion": "Se devengan sueldos del mes por $395.000 sin haberlos pagado aún",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Sueldos y jornales (resultado negativo), sube Sueldos a pagar (P+). El PN disminuye y el Pasivo aumenta.",
+    "cuentas_involucradas": ["Sueldos y jornales", "Sueldos a pagar"]
+  },
+  {
+    "id": "t145",
+    "descripcion": "Se paga el alquiler mensual de la oficina por $180.000 con débito bancario",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Alquileres (resultado negativo), baja Banco (A-). El PN disminuye por el gasto.",
+    "cuentas_involucradas": ["Alquileres", "Banco"]
+  },
+  {
+    "id": "t146",
+    "descripcion": "Se paga la factura de electricidad de la planta por $67.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Luz y fuerza motriz (resultado negativo), baja Caja (A-). El PN disminuye por el gasto de servicios.",
+    "cuentas_involucradas": ["Luz y fuerza motriz", "Caja"]
+  },
+  {
+    "id": "t147",
+    "descripcion": "Se paga la factura de gas natural del establecimiento industrial por $43.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gas (resultado negativo), baja Banco (A-). El PN disminuye por el gasto de servicios.",
+    "cuentas_involucradas": ["Gas", "Banco"]
+  },
+  {
+    "id": "t148",
+    "descripcion": "Se paga la factura de agua del local comercial por $19.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Agua (resultado negativo), baja Caja (A-). El PN disminuye por el gasto.",
+    "cuentas_involucradas": ["Agua", "Caja"]
+  },
+  {
+    "id": "t149",
+    "descripcion": "Se paga la póliza anual de seguro del edificio de $72.000 imputándola como gasto del período",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Seguros (resultado negativo), baja Caja (A-). El PN disminuye por el gasto del período.",
+    "cuentas_involucradas": ["Seguros", "Caja"]
+  },
+  {
+    "id": "t150",
+    "descripcion": "Se registra la amortización mensual del rodado de la empresa por $28.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Amortización de rodados (resultado negativo), sube Amortización acumulada (Activo regularizador). El PN disminuye por el gasto de depreciación.",
+    "cuentas_involucradas": ["Amortización de rodados", "Amortización acumulada de rodados"]
+  },
+  {
+    "id": "t151",
+    "descripcion": "Se registra la amortización mensual de los equipos de computación por $18.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Amortización de equipos (resultado negativo), sube Amortización acumulada equipos (Activo regularizador). El PN disminuye por la depreciación.",
+    "cuentas_involucradas": ["Amortización de equipos", "Amortización acumulada de equipos"]
+  },
+  {
+    "id": "t152",
+    "descripcion": "Se registra la amortización anual del software de gestión por $78.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Amortización de intangibles (resultado negativo), sube Amortización acumulada de intangibles (Activo regularizador). El PN disminuye.",
+    "cuentas_involucradas": ["Amortización de intangibles", "Amortización acumulada de intangibles"]
+  },
+  {
+    "id": "t153",
+    "descripcion": "Se carga como incobrable la deuda de un cliente en concurso de acreedores por $160.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Deudores incobrables (resultado negativo), baja Clientes (A-). El PN disminuye por la pérdida reconocida.",
+    "cuentas_involucradas": ["Deudores incobrables", "Clientes"]
+  },
+  {
+    "id": "t154",
+    "descripcion": "Se constituye una previsión para deudores incobrables por $95.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Previsión para deudores incobrables (resultado negativo), sube Previsión Ds incobrables (Activo regularizador). El PN disminuye por el gasto estimado.",
+    "cuentas_involucradas": ["Prev. deudores incobrables", "Previsión Ds. incobrables (regulariz.)"]
+  },
+  {
+    "id": "t155",
+    "descripcion": "Se paga publicidad en redes sociales por $58.000 a una agencia digital",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Publicidad y propaganda (resultado negativo), baja Banco (A-). El PN disminuye por el gasto de marketing.",
+    "cuentas_involucradas": ["Publicidad y propaganda", "Banco"]
+  },
+  {
+    "id": "t156",
+    "descripcion": "Se pagan honorarios al contador por la liquidación impositiva mensual de $85.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Honorarios contables y legales (resultado negativo), baja Banco (A-). El PN disminuye por el gasto de honorarios.",
+    "cuentas_involucradas": ["Honorarios contables y legales", "Banco"]
+  },
+  {
+    "id": "t157",
+    "descripcion": "Se devengan intereses de préstamo bancario por $63.000 que se pagarán el mes siguiente",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Intereses perdidos (resultado negativo), sube Intereses a pagar (P+). El PN disminuye por el gasto financiero devengado.",
+    "cuentas_involucradas": ["Intereses perdidos", "Intereses a pagar"]
+  },
+  {
+    "id": "t158",
+    "descripcion": "Se pagan intereses de préstamo bancario por $63.000 ya devengados el mes anterior",
+    "tipo": "permutativo",
+    "subtipo": "permutativo",
+    "explicacion": "Baja Banco (A-), baja Intereses a pagar (P-). El gasto ya se registró; aquí solo se cancela el pasivo. El PN no varía.",
+    "cuentas_involucradas": ["Banco", "Intereses a pagar"]
+  },
+  {
+    "id": "t159",
+    "descripcion": "Se devenga diferencia de cambio negativa de $145.000 en deuda en moneda extranjera por suba del dólar",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Diferencia de cambio negativa (resultado negativo), sube Deuda en moneda extranjera (P+). El PN disminuye por la pérdida cambiaria.",
+    "cuentas_involucradas": ["Diferencia de cambio negativa", "Deuda en moneda extranjera"]
+  },
+  {
+    "id": "t160",
+    "descripcion": "Se vende un bien de uso con una pérdida de $220.000; se cobra en banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Banco (A+), baja Bien de uso (A-), sube Pérdida en venta de bien de uso (resultado negativo). El PN disminuye por la pérdida.",
+    "cuentas_involucradas": ["Banco", "Bien de uso", "Pérdida en venta de bien de uso"]
+  },
+  {
+    "id": "t161",
+    "descripcion": "Se paga el impuesto a los ingresos brutos del mes por $92.000 mediante débito bancario",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Impuesto a los ingresos brutos (resultado negativo), baja Banco (A-). El PN disminuye por el gasto tributario.",
+    "cuentas_involucradas": ["Impuesto a los ingresos brutos", "Banco"]
+  },
+  {
+    "id": "t162",
+    "descripcion": "Se devenga el impuesto a las ganancias del ejercicio por $1.850.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Impuesto a las ganancias (resultado negativo), sube Impuesto a las ganancias a pagar (P+). El PN disminuye por el gasto tributario devengado.",
+    "cuentas_involucradas": ["Impuesto a las ganancias", "Impuesto a las ganancias a pagar"]
+  },
+  {
+    "id": "t163",
+    "descripcion": "Se paga un flete por $34.000 en efectivo por la entrega de mercadería a un cliente",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de flete y transporte (resultado negativo), baja Caja (A-). El PN disminuye por el gasto de logística.",
+    "cuentas_involucradas": ["Gastos de flete y transporte", "Caja"]
+  },
+  {
+    "id": "t164",
+    "descripcion": "Se recibe una multa de la AFIP por $180.000 por presentación tardía de DDJJ",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Multas y sanciones (resultado negativo), sube Multas a pagar (P+). El PN disminuye por la pérdida reconocida.",
+    "cuentas_involucradas": ["Multas y sanciones", "Multas a pagar"]
+  },
+  {
+    "id": "t165",
+    "descripcion": "Un cliente devuelve mercaderías vendidas a crédito por $95.000 (nota de crédito emitida)",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Devoluciones de ventas (resultado negativo), baja Clientes (A-). El PN disminuye al revertirse parcialmente el ingreso.",
+    "cuentas_involucradas": ["Devoluciones de ventas", "Clientes"]
+  },
+  {
+    "id": "t166",
+    "descripcion": "Se otorga un descuento al cliente Almacenes Cuyanos S.A. por $42.000 sobre la factura original",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Descuentos otorgados (resultado negativo), baja Clientes (A-). El PN disminuye por la reducción del ingreso.",
+    "cuentas_involucradas": ["Descuentos otorgados", "Clientes"]
+  },
+  {
+    "id": "t167",
+    "descripcion": "Se devenga la amortización mensual del local comercial propio por $52.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Amortización de inmuebles (resultado negativo), sube Amortización acumulada de inmuebles (Activo regularizador). El PN disminuye.",
+    "cuentas_involucradas": ["Amortización de inmuebles", "Amortización acumulada de inmuebles"]
+  },
+  {
+    "id": "t168",
+    "descripcion": "Se pagan honorarios a un abogado externo por $120.000 por asesoramiento en un contrato",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Honorarios profesionales (resultado negativo), baja Banco (A-). El PN disminuye por el gasto.",
+    "cuentas_involucradas": ["Honorarios profesionales", "Banco"]
+  },
+  {
+    "id": "t169",
+    "descripcion": "Se pagan $27.000 de mantenimiento del sistema informático de gestión",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de mantenimiento (resultado negativo), baja Banco (A-). El PN disminuye por el gasto operativo.",
+    "cuentas_involucradas": ["Gastos de mantenimiento", "Banco"]
+  },
+  {
+    "id": "t170",
+    "descripcion": "Se registran las cargas sociales patronales devengadas del mes por $215.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Cargas sociales (resultado negativo), sube Cargas sociales a pagar (P+). El PN disminuye y el pasivo aumenta.",
+    "cuentas_involucradas": ["Cargas sociales", "Cargas sociales a pagar"]
+  },
+  {
+    "id": "t171",
+    "descripcion": "Se paga el teléfono e internet del local por $22.000 con débito bancario",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de comunicaciones (resultado negativo), baja Banco (A-). El PN disminuye por el gasto de telecomunicaciones.",
+    "cuentas_involucradas": ["Gastos de comunicaciones", "Banco"]
+  },
+  {
+    "id": "t172",
+    "descripcion": "Se registra la pérdida por deterioro de mercaderías caducadas valuadas en $73.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Pérdida por deterioro de inventario (resultado negativo), baja Mercaderías (A-). El PN disminuye por la pérdida.",
+    "cuentas_involucradas": ["Pérdida por deterioro de inventario", "Mercaderías"]
+  },
+  {
+    "id": "t173",
+    "descripcion": "Se paga una comisión de venta al agente comercial por $48.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Comisiones sobre ventas (resultado negativo), baja Caja (A-). El PN disminuye por el gasto comercial.",
+    "cuentas_involucradas": ["Comisiones sobre ventas", "Caja"]
+  },
+  {
+    "id": "t174",
+    "descripcion": "Se devuelven mercaderías al contado al cliente Distribuidora El Puente S.A. por $130.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Devoluciones de ventas (resultado negativo), sube Caja (P- o A-). El PN disminuye al revertirse parcialmente el ingreso.",
+    "cuentas_involucradas": ["Devoluciones de ventas", "Caja"]
+  },
+  {
+    "id": "t175",
+    "descripcion": "Se devenga la amortización de gastos de organización activados por $15.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Amortización de gastos de organización (resultado negativo), sube Amortización acumulada de intangibles. El PN disminuye.",
+    "cuentas_involucradas": ["Amortización de gastos de organización", "Amortización acumulada de intangibles"]
+  },
+  {
+    "id": "t176",
+    "descripcion": "Se registra una pérdida de inventario por robo de mercaderías valuadas en $88.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Pérdida extraordinaria (resultado negativo), baja Mercaderías (A-). El PN disminuye por la pérdida.",
+    "cuentas_involucradas": ["Pérdida extraordinaria", "Mercaderías"]
+  },
+  {
+    "id": "t177",
+    "descripcion": "Se paga combustible para los vehículos de la empresa por $31.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de movilidad y combustible (resultado negativo), baja Caja (A-). El PN disminuye por el gasto operativo.",
+    "cuentas_involucradas": ["Gastos de movilidad y combustible", "Caja"]
+  },
+  {
+    "id": "t178",
+    "descripcion": "Se devengan intereses de deuda hipotecaria por $210.000 aún no pagados",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Intereses perdidos (resultado negativo), sube Intereses a pagar (P+). El PN disminuye por el gasto financiero devengado.",
+    "cuentas_involucradas": ["Intereses perdidos", "Intereses a pagar"]
+  },
+  {
+    "id": "t179",
+    "descripcion": "Se registra un descuento financiero otorgado al cliente por pago anticipado de $29.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Descuentos otorgados (resultado negativo), baja Caja (A-) o baja Clientes (A-). El PN disminuye por el descuento concedido.",
+    "cuentas_involucradas": ["Descuentos otorgados", "Clientes"]
+  },
+  {
+    "id": "t180",
+    "descripcion": "Se paga la cuota mensual del impuesto a las ganancias (anticipo) de $340.000 mediante débito bancario",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Anticipo impuesto a las ganancias (resultado negativo o activo según tratamiento) o baja directamente el PN. Aquí se imputa como gasto del período. El PN disminuye.",
+    "cuentas_involucradas": ["Impuesto a las ganancias", "Banco"]
+  },
+  {
+    "id": "t181",
+    "descripcion": "Se reconoce el CMV de una venta a crédito anterior por $890.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube CMV (resultado negativo), baja Mercaderías (A-). El PN disminuye por el costo reconocido.",
+    "cuentas_involucradas": ["CMV", "Mercaderías"]
+  },
+  {
+    "id": "t182",
+    "descripcion": "Se pagan gastos de limpieza y mantenimiento del local por $16.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de limpieza (resultado negativo), baja Caja (A-). El PN disminuye por el gasto operativo.",
+    "cuentas_involucradas": ["Gastos de limpieza", "Caja"]
+  },
+  {
+    "id": "t183",
+    "descripcion": "Se imputa como gasto el seguro devengado del mes de $3.000 (de la póliza anual prepagada)",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Seguros (resultado negativo), baja Seguros pagados por adelantado (A-). El PN disminuye por el gasto devengado.",
+    "cuentas_involucradas": ["Seguros", "Seguros pagados por adelantado"]
+  },
+  {
+    "id": "t184",
+    "descripcion": "Se imputa como gasto el alquiler devengado del mes de $8.000 (del prepago semestral)",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Alquileres (resultado negativo), baja Alquileres pagados por adelantado (A-). El PN disminuye por el gasto devengado.",
+    "cuentas_involucradas": ["Alquileres", "Alquileres pagados por adelantado"]
+  },
+  {
+    "id": "t185",
+    "descripcion": "Se registra la provisión para garantías posventa de $110.000 estimada sobre ventas del trimestre",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos por garantías (resultado negativo), sube Previsión para garantías (P+). El PN disminuye por el gasto estimado.",
+    "cuentas_involucradas": ["Gastos por garantías", "Previsión para garantías"]
+  },
+  {
+    "id": "t186",
+    "descripcion": "Se pagan $24.000 en concepto de estampillas y sellados por un contrato de locación",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Impuesto a los sellos (resultado negativo), baja Banco (A-). El PN disminuye por el gasto tributario.",
+    "cuentas_involucradas": ["Impuesto a los sellos", "Banco"]
+  },
+  {
+    "id": "t187",
+    "descripcion": "Se reconoce una pérdida cambiaria de $98.000 en la deuda con proveedor del exterior (suba del tipo de cambio)",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Diferencia de cambio negativa (resultado negativo), sube Proveedores del exterior (P+). El PN disminuye.",
+    "cuentas_involucradas": ["Diferencia de cambio negativa", "Proveedores del exterior"]
+  },
+  {
+    "id": "t188",
+    "descripcion": "Se pagan $38.000 de viáticos a viajante de comercio en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos de viajes y viáticos (resultado negativo), baja Caja (A-). El PN disminuye por el gasto.",
+    "cuentas_involucradas": ["Gastos de viajes y viáticos", "Caja"]
+  },
+  {
+    "id": "t189",
+    "descripcion": "Se registra la provisión mensual para indemnizaciones laborales por $75.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Provisión para indemnizaciones (resultado negativo), sube Previsión para indemnizaciones (P+). El PN disminuye por el pasivo contingente reconocido.",
+    "cuentas_involucradas": ["Provisión para indemnizaciones", "Previsión para indemnizaciones"]
+  },
+  {
+    "id": "t190",
+    "descripcion": "Se reconoce el CMV de ventas al contado del día por $1.340.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube CMV (resultado negativo), baja Mercaderías (A-). El PN disminuye por el costo de ventas reconocido.",
+    "cuentas_involucradas": ["CMV", "Mercaderías"]
+  },
+  {
+    "id": "t191",
+    "descripcion": "Se pagan horas extra a operarios de producción por $55.000 en efectivo",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Horas extra (resultado negativo), baja Caja (A-). El PN disminuye por el gasto en personal.",
+    "cuentas_involucradas": ["Horas extra", "Caja"]
+  },
+  {
+    "id": "t192",
+    "descripcion": "Se pagan $14.000 de gastos bancarios (comisiones y mantenimiento de cuenta) debitados automáticamente",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Gastos bancarios (resultado negativo), baja Banco (A-). El PN disminuye por el gasto financiero.",
+    "cuentas_involucradas": ["Gastos bancarios", "Banco"]
+  },
+  {
+    "id": "t193",
+    "descripcion": "Se reconoce la pérdida por venta de acciones de cartera: precio de venta $420.000, costo $580.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Banco (A+), baja Inversiones en acciones (A-) en $580.000, sube Pérdida por venta de inversiones (resultado negativo) en $160.000. El PN disminuye.",
+    "cuentas_involucradas": ["Banco", "Inversiones en acciones", "Pérdida por venta de inversiones"]
+  },
+  {
+    "id": "t194",
+    "descripcion": "Se devenga la provisión para el aguinaldo (SAC) del semestre por $190.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Sueldo anual complementario (resultado negativo), sube SAC a pagar (P+). El PN disminuye por el gasto estimado.",
+    "cuentas_involucradas": ["Sueldo anual complementario", "SAC a pagar"]
+  },
+  {
+    "id": "t195",
+    "descripcion": "Se paga el impuesto a los débitos y créditos bancarios del mes por $8.500 debitado del banco",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Impuesto a los débitos y créditos (resultado negativo), baja Banco (A-). El PN disminuye por el gasto tributario.",
+    "cuentas_involucradas": ["Impuesto a los débitos y créditos", "Banco"]
+  },
+  {
+    "id": "t196",
+    "descripcion": "Se registra una multa del Ministerio de Trabajo por incumplimiento de normas laborales por $320.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Multas y sanciones (resultado negativo), sube Multas a pagar (P+). El PN disminuye por la pérdida reconocida.",
+    "cuentas_involucradas": ["Multas y sanciones", "Multas a pagar"]
+  },
+  {
+    "id": "t197",
+    "descripcion": "Se devenga el interés de un préstamo para capital de trabajo de $112.000 a pagar el mes siguiente",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Intereses perdidos (resultado negativo), sube Intereses a pagar (P+). El PN disminuye por el gasto financiero.",
+    "cuentas_involucradas": ["Intereses perdidos", "Intereses a pagar"]
+  },
+  {
+    "id": "t198",
+    "descripcion": "Se reconoce como gasto el seguro contra incendio del período por $7.500 (del prepago)",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Seguros (resultado negativo), baja Seguros pagados por adelantado (A-). El PN disminuye por el gasto devengado.",
+    "cuentas_involucradas": ["Seguros", "Seguros pagados por adelantado"]
+  },
+  {
+    "id": "t199",
+    "descripcion": "Se pagan $62.000 de honorarios al estudio jurídico por gestión de cobro extrajudicial",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Honorarios profesionales (resultado negativo), baja Banco (A-). El PN disminuye por el gasto.",
+    "cuentas_involucradas": ["Honorarios profesionales", "Banco"]
+  },
+  {
+    "id": "t200",
+    "descripcion": "Se reconoce la pérdida por deterioro de un bien de uso obsoleto por $480.000",
+    "tipo": "modificativo",
+    "subtipo": "modificativo_negativo",
+    "explicacion": "Sube Pérdida por deterioro de bienes de uso (resultado negativo), sube Deterioro acumulado (Activo regularizador). El PN disminuye por la pérdida reconocida.",
+    "cuentas_involucradas": ["Pérdida por deterioro de bienes de uso", "Deterioro acumulado de bienes de uso"]
+  }
+]

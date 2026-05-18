@@ -74,10 +74,13 @@ export interface EjercicioMayor {
 
 // ── Quiz types ───────────────────────────────────────────────────────────────
 
+export type OptionColorKey = "blue" | "emerald" | "amber" | "rose" | "violet";
+
 export interface QuizOption {
   label: string;
   value: string;
   isCorrect: boolean;
+  colorKey: OptionColorKey;
 }
 
 export interface QuizQuestion {
@@ -85,6 +88,7 @@ export interface QuizQuestion {
   pregunta: string;
   opciones: QuizOption[];
   explicacion: string;
+  tablaAsientos?: LineaMayor[];
   datos?: Cuenta | Transaccion | Asiento | EjercicioMayor;
 }
 

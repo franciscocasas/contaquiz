@@ -5,6 +5,7 @@ import type {
   EjercicioMayor,
   QuizQuestion,
   QuizOption,
+  OptionColorKey,
   GameMode,
   GameSlug,
 } from "./types";
@@ -49,15 +50,24 @@ export function getQuestionCount(mode: GameMode): number | null {
 
 // ── Build questions per game type ─────────────────────────────────────────────
 
-export function buildNaturalezaQuestions(cuentas: Cuenta[]): QuizQuestion[] {
-  const naturalezas = ["Activo", "Pasivo", "Ingreso", "Gasto", "Patrimonio Neto"];
+// Naturaleza: fixed order, semantic colors
+const NATURALEZA_ORDER = ["Activo", "Pasivo", "Ingreso", "Gasto", "Patrimonio Neto"];
+const NATURALEZA_COLOR: Record<string, OptionColorKey> = {
+  "Activo": "blue",
+  "Pasivo": "rose",
+  "Ingreso": "emerald",
+  "Gasto": "amber",
+  "Patrimonio Neto": "violet",
+};
 
+export function buildNaturalezaQuestions(cuentas: Cuenta[]): QuizQuestion[] {
   return cuentas.map((c) => {
-    const wrong = shuffleArray(naturalezas.filter((n) => n !== c.naturaleza)).slice(0, 3);
-    const opciones: QuizOption[] = shuffleArray([
-      { label: c.naturaleza, value: c.naturaleza, isCorrect: true },
-      ...wrong.map((w) => ({ label: w, value: w, isCorrect: false })),
-    ]);
+    const opciones: QuizOption[] = NATURALEZA_ORDER.map((n) => ({
+      label: n,
+      value: n,
+      isCorrect: n === c.naturaleza,
+      colorKey: NATURALEZA_COLOR[n],
+    }));
     return {
       id: c.id,
       pregunta: `¿Cuál es la naturaleza de "${c.cuenta}"?`,
@@ -68,13 +78,14 @@ export function buildNaturalezaQuestions(cuentas: Cuenta[]): QuizQuestion[] {
   });
 }
 
+// Permutativo: fixed order, semantic colors
 export function buildPermutativoQuestions(transacciones: Transaccion[]): QuizQuestion[] {
   return transacciones.map((t) => {
     const isPermutativo = t.tipo === "permutativo";
-    const opciones: QuizOption[] = shuffleArray([
-      { label: "Permutativo", value: "permutativo", isCorrect: isPermutativo },
-      { label: "Modificativo", value: "modificativo", isCorrect: !isPermutativo },
-    ]);
+    const opciones: QuizOption[] = [
+      { label: "Permutativo", value: "permutativo", isCorrect: isPermutativo, colorKey: "blue" },
+      { label: "Modificativo", value: "modificativo", isCorrect: !isPermutativo, colorKey: "amber" },
+    ];
     return {
       id: t.id,
       pregunta: t.descripcion,
@@ -85,95 +96,92 @@ export function buildPermutativoQuestions(transacciones: Transaccion[]): QuizQue
   });
 }
 
+// Estado: canonical order, semantic colors
+// 3-option questions (corriente === null): SP=blue, Resultados=emerald, EvoluciónPN=violet
+// 4-option questions (corriente !== null): SP-corriente=blue, SP-no corriente=rose, Resultados=emerald, EvoluciónPN=violet
 export function buildEstadoQuestions(cuentas: Cuenta[]): QuizQuestion[] {
-  const estados = [
-    { value: "situacion_patrimonial", label: "Est. Situación Patrimonial" },
-    { value: "resultados", label: "Estado de Resultados" },
-    { value: "evolucion_pn", label: "Est. Evolución del PN" },
-  ];
-
   return cuentas.map((c) => {
-    const correctLabel = estados.find((e) => e.value === c.estado)!.label;
-    const wrong = shuffleArray(estados.filter((e) => e.value !== c.estado)).slice(0, 2);
+    const estadoLabel: Record<string, string> = {
+      situacion_patrimonial: "Est. Situación Patrimonial",
+      resultados: "Estado de Resultados",
+      evolucion_pn: "Est. Evolución del PN",
+    };
 
     let pregunta = `¿En qué estado contable aparece "${c.cuenta}"?`;
     if (c.corriente !== null) {
       pregunta += ` ¿Es corriente o no corriente?`;
     }
 
-    const correctValue = c.corriente === null
-      ? c.estado
-      : `${c.estado}__${c.corriente ? "corriente" : "no_corriente"}`;
+    let opciones: QuizOption[];
 
-    const correctLabelFull = c.corriente === null
-      ? correctLabel
-      : `${correctLabel} — ${c.corriente ? "Corriente" : "No Corriente"}`;
-
-    const wrongOptions: QuizOption[] = wrong.map((w) => ({
-      label: w.label,
-      value: w.value,
-      isCorrect: false,
-    }));
-
-    // Add a corriente/no-corriente distractor if applicable
-    if (c.corriente !== null) {
-      wrongOptions.push({
-        label: `${correctLabel} — ${c.corriente ? "No Corriente" : "Corriente"}`,
-        value: `${c.estado}__${c.corriente ? "no_corriente" : "corriente"}`,
-        isCorrect: false,
-      });
+    if (c.corriente === null) {
+      opciones = [
+        { label: estadoLabel.situacion_patrimonial, value: "situacion_patrimonial", isCorrect: c.estado === "situacion_patrimonial", colorKey: "blue" },
+        { label: estadoLabel.resultados, value: "resultados", isCorrect: c.estado === "resultados", colorKey: "emerald" },
+        { label: estadoLabel.evolucion_pn, value: "evolucion_pn", isCorrect: c.estado === "evolucion_pn", colorKey: "violet" },
+      ];
+    } else {
+      const correctValue = `${c.estado}__${c.corriente ? "corriente" : "no_corriente"}`;
+      opciones = [
+        { label: "Est. Situación Patrimonial — Corriente", value: "situacion_patrimonial__corriente", isCorrect: correctValue === "situacion_patrimonial__corriente", colorKey: "blue" },
+        { label: "Est. Situación Patrimonial — No Corriente", value: "situacion_patrimonial__no_corriente", isCorrect: correctValue === "situacion_patrimonial__no_corriente", colorKey: "rose" },
+        { label: estadoLabel.resultados, value: "resultados", isCorrect: false, colorKey: "emerald" },
+        { label: estadoLabel.evolucion_pn, value: "evolucion_pn", isCorrect: false, colorKey: "violet" },
+      ];
     }
 
-    const opciones: QuizOption[] = shuffleArray([
-      { label: correctLabelFull, value: correctValue, isCorrect: true },
-      ...wrongOptions.slice(0, 3),
-    ]);
+    const correctLabel = opciones.find((o) => o.isCorrect)!.label;
 
     return {
       id: c.id,
       pregunta,
       opciones,
-      explicacion: `${c.cuenta}: ${correctLabelFull}. ${c.notas}`,
+      explicacion: `${c.cuenta}: ${correctLabel}. ${c.notas}`,
       datos: c,
     };
   });
 }
 
+// Asientos: fixed order — DEBE (blue) first, HABER (amber) second for target account,
+// then 2 distractor accounts (emerald, rose)
+const ASIENTOS_DISTRACTOR_COLORS: OptionColorKey[] = ["emerald", "rose"];
+
 export function buildAsientosQuestions(asientos: Asiento[]): QuizQuestion[] {
   return asientos.map((a) => {
-    // For each account in the asiento, ask if it goes Debe or Haber
-    // Build options based on all accounts in the asiento
     const lineas = a.lineas;
-
-    // Pick one random line to ask about
     const lineaTarget = lineas[Math.floor(Math.random() * lineas.length)];
-    const correctLabel = lineaTarget.lado === "debe" ? "Debe" : "Haber";
-    const wrongLabel = lineaTarget.lado === "debe" ? "Haber" : "Debe";
+    const isDebe = lineaTarget.lado === "debe";
 
-    // Also build a summary option showing the full entry
     const resumenCorrecto = lineas
       .map((l) => `${l.cuenta} → ${l.lado === "debe" ? "DEBE" : "HABER"}`)
       .join(" | ");
 
-    const opciones: QuizOption[] = shuffleArray([
+    const otrasLineas = shuffleArray(
+      lineas.filter((l) => l.cuenta !== lineaTarget.cuenta)
+    ).slice(0, 2);
+
+    const otrasOpts: QuizOption[] = otrasLineas.map((l, i) => ({
+      label: `${l.cuenta} → ${l.lado === "debe" ? "HABER" : "DEBE"}`,
+      value: `wrong_${i}`,
+      isCorrect: false,
+      colorKey: ASIENTOS_DISTRACTOR_COLORS[i],
+    }));
+
+    const opciones: QuizOption[] = [
       {
-        label: `${lineaTarget.cuenta} → ${correctLabel.toUpperCase()}`,
-        value: "correct",
-        isCorrect: true,
+        label: `${lineaTarget.cuenta} → DEBE`,
+        value: "target_debe",
+        isCorrect: isDebe,
+        colorKey: "blue",
       },
       {
-        label: `${lineaTarget.cuenta} → ${wrongLabel.toUpperCase()}`,
-        value: "wrong1",
-        isCorrect: false,
+        label: `${lineaTarget.cuenta} → HABER`,
+        value: "target_haber",
+        isCorrect: !isDebe,
+        colorKey: "amber",
       },
-      ...shuffleArray(lineas.filter((l) => l.cuenta !== lineaTarget.cuenta))
-        .slice(0, 2)
-        .map((l, i) => ({
-          label: `${l.cuenta} → ${l.lado === "debe" ? "HABER" : "DEBE"}`,
-          value: `wrong${i + 2}`,
-          isCorrect: false,
-        })),
-    ]).slice(0, 4);
+      ...otrasOpts,
+    ];
 
     return {
       id: a.id,
@@ -185,33 +193,37 @@ export function buildAsientosQuestions(asientos: Asiento[]): QuizQuestion[] {
   });
 }
 
+// Mayor: sorted amounts (ascending), positional colors, proper table via tablaAsientos
+const MAYOR_COLORS: OptionColorKey[] = ["blue", "emerald", "amber", "rose"];
+
 export function buildMayorQuestions(ejercicios: EjercicioMayor[]): QuizQuestion[] {
   return ejercicios.map((e) => {
-    const formatPesos = (n: number) =>
-      `$${n.toLocaleString("es-AR")}`;
+    const formatPesos = (n: number) => `$${n.toLocaleString("es-AR")}`;
 
-    const correctLabel = `${formatPesos(e.saldo_final)} (${e.tipo_saldo})`;
+    // Deduplicate amounts
+    const seen = new Set<number>();
+    const uniqueAmounts: number[] = [];
+    [e.saldo_final, ...e.opciones_distractor].forEach((amt) => {
+      if (!seen.has(amt)) {
+        seen.add(amt);
+        uniqueAmounts.push(amt);
+      }
+    });
+    const sortedAmounts = uniqueAmounts.slice(0, 4).sort((a, b) => a - b);
 
-    const distractores = shuffleArray(e.opciones_distractor).slice(0, 3).map((d, i) => ({
-      label: formatPesos(d),
-      value: `dist_${i}`,
-      isCorrect: false,
+    const opciones: QuizOption[] = sortedAmounts.map((amt, i) => ({
+      label: formatPesos(amt),
+      value: `opt_${i}`,
+      isCorrect: amt === e.saldo_final,
+      colorKey: MAYOR_COLORS[i],
     }));
-
-    const asientosTexto = e.asientos
-      .map((a) => `${a.ref}: ${a.descripcion} — D: $${a.debe.toLocaleString("es-AR")} H: $${a.haber.toLocaleString("es-AR")}`)
-      .join("\n");
-
-    const opciones: QuizOption[] = shuffleArray([
-      { label: correctLabel, value: "correct", isCorrect: true },
-      ...distractores,
-    ]);
 
     return {
       id: e.id,
-      pregunta: `${e.titulo}\n\n${asientosTexto}\n\n¿Cuál es el saldo de "${e.cuenta_pregunta}"?`,
+      pregunta: `${e.titulo}\n¿Cuál es el saldo final de "${e.cuenta_pregunta}"?`,
       opciones,
-      explicacion: `Debe: $${e.saldo_debe.toLocaleString("es-AR")} | Haber: $${e.saldo_haber.toLocaleString("es-AR")} → Saldo ${e.tipo_saldo}: ${formatPesos(e.saldo_final)}`,
+      explicacion: `DEBE: ${formatPesos(e.saldo_debe)} | HABER: ${formatPesos(e.saldo_haber)} → Saldo ${e.tipo_saldo}: ${formatPesos(e.saldo_final)}`,
+      tablaAsientos: e.asientos,
       datos: e,
     };
   });

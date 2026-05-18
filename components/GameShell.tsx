@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, Home } from "lucide-react";
 import type { GameMode, GameSlug, QuizQuestion } from "@/lib/types";
 import type { GameMeta } from "@/lib/games";
 import { ModeSelector } from "./ModeSelector";
@@ -249,9 +249,18 @@ export function GameShell({ game }: Props) {
             </div>
           </div>
         )}
-        <span className="text-sm font-mono text-slate-400 tabular-nums">
-          {score} ok
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-mono text-slate-400 tabular-nums">
+            {score} ok
+          </span>
+          <button
+            onClick={() => router.push("/")}
+            className="w-8 h-8 flex items-center justify-center rounded-lg text-slate-600 hover:text-slate-400 hover:bg-slate-800 transition-all active:scale-[0.95]"
+            aria-label="Ir al inicio"
+          >
+            <Home size={15} />
+          </button>
+        </div>
       </div>
 
       {/* Question */}

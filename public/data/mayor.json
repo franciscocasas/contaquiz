@@ -1,1 +1,2552 @@
-[]
+[
+  {
+    "id": "m001",
+    "nivel": "basico",
+    "titulo": "Caja — empresa comercial (apertura y operaciones básicas)",
+    "cuenta_pregunta": "Caja",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Aporte de capital en efectivo",
+        "debe": 1000000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra de mercadería al contado",
+        "debe": 0,
+        "haber": 350000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Venta al contado",
+        "debe": 500000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Pago de alquiler del mes",
+        "debe": 0,
+        "haber": 80000
+      }
+    ],
+    "saldo_debe": 1500000,
+    "saldo_haber": 430000,
+    "saldo_final": 1070000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      430000,
+      1500000,
+      950000
+    ]
+  },
+  {
+    "id": "m002",
+    "nivel": "basico",
+    "titulo": "Clientes — ventas a crédito y cobros",
+    "cuenta_pregunta": "Clientes",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Venta a crédito N°001",
+        "debe": 800000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Venta a crédito N°002",
+        "debe": 450000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cobro cliente N°001",
+        "debe": 0,
+        "haber": 600000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Nota de crédito — devolución parcial",
+        "debe": 0,
+        "haber": 50000
+      }
+    ],
+    "saldo_debe": 1250000,
+    "saldo_haber": 650000,
+    "saldo_final": 600000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      650000,
+      1250000,
+      1900000
+    ]
+  },
+  {
+    "id": "m003",
+    "nivel": "basico",
+    "titulo": "Proveedores — compras a crédito y pagos",
+    "cuenta_pregunta": "Proveedores",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra mercadería a crédito",
+        "debe": 0,
+        "haber": 900000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra insumos a crédito",
+        "debe": 0,
+        "haber": 120000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago parcial proveedor",
+        "debe": 400000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 400000,
+    "saldo_haber": 1020000,
+    "saldo_final": 620000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      400000,
+      1020000,
+      496000
+    ]
+  },
+  {
+    "id": "m004",
+    "nivel": "basico",
+    "titulo": "Banco Nación Cuenta Corriente — operaciones de caja",
+    "cuenta_pregunta": "Banco Nación Cuenta Corriente",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Depósito de cheque de cliente",
+        "debe": 750000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Pago de sueldos por débito",
+        "debe": 0,
+        "haber": 320000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cobro de deudor mediante transferencia",
+        "debe": 180000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Débito bancario por gastos de mantenimiento",
+        "debe": 0,
+        "haber": 8500
+      }
+    ],
+    "saldo_debe": 930000,
+    "saldo_haber": 328500,
+    "saldo_final": 601500,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      320000,
+      930000,
+      481200
+    ]
+  },
+  {
+    "id": "m005",
+    "nivel": "basico",
+    "titulo": "Mercaderías — compras y costo de ventas",
+    "cuenta_pregunta": "Mercaderías",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra de mercadería al contado",
+        "debe": 600000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra de mercadería a crédito",
+        "debe": 400000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Registro de CMV por venta",
+        "debe": 0,
+        "haber": 550000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Devolución de compra a proveedor",
+        "debe": 0,
+        "haber": 80000
+      }
+    ],
+    "saldo_debe": 1000000,
+    "saldo_haber": 630000,
+    "saldo_final": 370000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      1000000,
+      630000,
+      296000
+    ]
+  },
+  {
+    "id": "m006",
+    "nivel": "basico",
+    "titulo": "Sueldos a Pagar — devengamiento y cancelación",
+    "cuenta_pregunta": "Sueldos a Pagar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Devengamiento sueldos mes",
+        "debe": 0,
+        "haber": 250000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Retenciones de aportes empleados",
+        "debe": 0,
+        "haber": 32500
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago de haberes netos",
+        "debe": 217500,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 217500,
+    "saldo_haber": 282500,
+    "saldo_final": 65000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      217500,
+      282500,
+      250000
+    ]
+  },
+  {
+    "id": "m007",
+    "nivel": "basico",
+    "titulo": "Préstamos Bancarios — obtención y cuotas",
+    "cuenta_pregunta": "Préstamos Bancarios",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Obtención préstamo bancario",
+        "debe": 0,
+        "haber": 1500000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Pago 1° cuota capital",
+        "debe": 150000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago 2° cuota capital",
+        "debe": 150000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Pago 3° cuota capital",
+        "debe": 150000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 450000,
+    "saldo_haber": 1500000,
+    "saldo_final": 1050000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      1500000,
+      900000,
+      840000
+    ]
+  },
+  {
+    "id": "m008",
+    "nivel": "basico",
+    "titulo": "Capital Social — aportes",
+    "cuenta_pregunta": "Capital Social",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución de la sociedad",
+        "debe": 0,
+        "haber": 2000000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Integración segunda cuota de capital",
+        "debe": 0,
+        "haber": 500000
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 2500000,
+    "saldo_final": 2500000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      1500000,
+      2000000
+    ]
+  },
+  {
+    "id": "m009",
+    "nivel": "basico",
+    "titulo": "IVA Crédito Fiscal — compras del mes",
+    "cuenta_pregunta": "IVA Crédito Fiscal",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "IVA compra mercadería",
+        "debe": 189000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "IVA compra bienes de uso",
+        "debe": 126000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "IVA servicios recibidos",
+        "debe": 42000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Compensación con IVA DF al cierre",
+        "debe": 0,
+        "haber": 357000
+      }
+    ],
+    "saldo_debe": 357000,
+    "saldo_haber": 357000,
+    "saldo_final": 0,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      357000,
+      189000,
+      1
+    ]
+  },
+  {
+    "id": "m010",
+    "nivel": "basico",
+    "titulo": "IVA Débito Fiscal — ventas del mes",
+    "cuenta_pregunta": "IVA Débito Fiscal",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "IVA venta N°001",
+        "debe": 0,
+        "haber": 210000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "IVA venta N°002",
+        "debe": 0,
+        "haber": 157500
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Nota de crédito — anulación parcial",
+        "debe": 31500,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 31500,
+    "saldo_haber": 367500,
+    "saldo_final": 336000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      210000,
+      157500,
+      268800
+    ]
+  },
+  {
+    "id": "m011",
+    "nivel": "basico",
+    "titulo": "Documentos a Cobrar — pagarés de clientes",
+    "cuenta_pregunta": "Documentos a Cobrar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Canje crédito por pagaré cliente A",
+        "debe": 500000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Canje crédito por pagaré cliente B",
+        "debe": 300000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cobro al vencimiento cliente A",
+        "debe": 0,
+        "haber": 500000
+      }
+    ],
+    "saldo_debe": 800000,
+    "saldo_haber": 500000,
+    "saldo_final": 300000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      800000,
+      500000,
+      240000
+    ]
+  },
+  {
+    "id": "m012",
+    "nivel": "basico",
+    "titulo": "Plazo Fijo — constitución y vencimiento",
+    "cuenta_pregunta": "Plazo Fijo",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución de plazo fijo",
+        "debe": 800000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Vencimiento y acreditación capital+intereses",
+        "debe": 0,
+        "haber": 800000
+      }
+    ],
+    "saldo_debe": 800000,
+    "saldo_haber": 800000,
+    "saldo_final": 0,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      800000,
+      400000,
+      1
+    ]
+  },
+  {
+    "id": "m013",
+    "nivel": "basico",
+    "titulo": "Ventas — ingresos del período",
+    "cuenta_pregunta": "Ventas",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Venta N°001 al contado",
+        "debe": 0,
+        "haber": 1200000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Venta N°002 a crédito",
+        "debe": 0,
+        "haber": 850000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Venta N°003 con tarjeta",
+        "debe": 0,
+        "haber": 430000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Nota de crédito — devolución cliente",
+        "debe": 95000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 95000,
+    "saldo_haber": 2480000,
+    "saldo_final": 2385000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      95000,
+      1200000,
+      1908000
+    ]
+  },
+  {
+    "id": "m014",
+    "nivel": "basico",
+    "titulo": "Costo de Mercaderías Vendidas (CMV)",
+    "cuenta_pregunta": "Costo de Mercaderías Vendidas (CMV)",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "CMV venta N°001",
+        "debe": 700000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "CMV venta N°002",
+        "debe": 480000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "CMV venta N°003",
+        "debe": 250000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 1430000,
+    "saldo_haber": 0,
+    "saldo_final": 1430000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      700000,
+      1144000
+    ]
+  },
+  {
+    "id": "m015",
+    "nivel": "basico",
+    "titulo": "Alquileres a Pagar — devengamiento mensual",
+    "cuenta_pregunta": "Alquileres a Pagar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Devengamiento alquiler enero",
+        "debe": 0,
+        "haber": 150000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Pago alquiler enero",
+        "debe": 150000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Devengamiento alquiler febrero",
+        "debe": 0,
+        "haber": 150000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Devengamiento alquiler marzo",
+        "debe": 0,
+        "haber": 150000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Pago alquiler feb+mar",
+        "debe": 300000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 450000,
+    "saldo_haber": 450000,
+    "saldo_final": 0,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      450000,
+      150000,
+      1
+    ]
+  },
+  {
+    "id": "m016",
+    "nivel": "basico",
+    "titulo": "Fondo Fijo — caja chica",
+    "cuenta_pregunta": "Fondo Fijo",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución fondo fijo",
+        "debe": 50000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Recomposición fondo fijo",
+        "debe": 50000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Recomposición fondo fijo",
+        "debe": 50000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 150000,
+    "saldo_haber": 0,
+    "saldo_final": 150000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      50000,
+      100000
+    ]
+  },
+  {
+    "id": "m017",
+    "nivel": "basico",
+    "titulo": "Intereses Ganados — devengamiento",
+    "cuenta_pregunta": "Intereses Ganados",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Intereses plazo fijo enero",
+        "debe": 0,
+        "haber": 48000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Intereses plazo fijo febrero",
+        "debe": 0,
+        "haber": 48000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Intereses plazo fijo marzo",
+        "debe": 0,
+        "haber": 48000
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 144000,
+    "saldo_final": 144000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      48000,
+      115200
+    ]
+  },
+  {
+    "id": "m018",
+    "nivel": "basico",
+    "titulo": "Cargas Sociales a Pagar — patronales",
+    "cuenta_pregunta": "Cargas Sociales a Pagar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Devengamiento cargas patronales enero",
+        "debe": 0,
+        "haber": 87500
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Depósito AFIP enero",
+        "debe": 87500,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Devengamiento cargas patronales febrero",
+        "debe": 0,
+        "haber": 87500
+      }
+    ],
+    "saldo_debe": 87500,
+    "saldo_haber": 175000,
+    "saldo_final": 87500,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      175000,
+      0,
+      70000
+    ]
+  },
+  {
+    "id": "m019",
+    "nivel": "basico",
+    "titulo": "Anticipo Impuesto a las Ganancias",
+    "cuenta_pregunta": "Anticipo Impuesto a las Ganancias",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Anticipo 1° cuota ganancias",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Anticipo 2° cuota ganancias",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Anticipo 3° cuota ganancias",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Imputación contra impuesto determinado",
+        "debe": 0,
+        "haber": 360000
+      }
+    ],
+    "saldo_debe": 360000,
+    "saldo_haber": 360000,
+    "saldo_final": 0,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      360000,
+      120000,
+      1
+    ]
+  },
+  {
+    "id": "m020",
+    "nivel": "basico",
+    "titulo": "Seguros Pagados por Adelantado",
+    "cuenta_pregunta": "Seguros Pagados por Adelantado",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Pago prima seguro anual",
+        "debe": 240000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Devengamiento porción enero",
+        "debe": 0,
+        "haber": 20000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Devengamiento porción febrero",
+        "debe": 0,
+        "haber": 20000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Devengamiento porción marzo",
+        "debe": 0,
+        "haber": 20000
+      }
+    ],
+    "saldo_debe": 240000,
+    "saldo_haber": 60000,
+    "saldo_final": 180000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      240000,
+      60000,
+      144000
+    ]
+  },
+  {
+    "id": "m021",
+    "nivel": "basico",
+    "titulo": "Ingresos Brutos (IIBB) — gasto impositivo",
+    "cuenta_pregunta": "Ingresos Brutos (IIBB)",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "IIBB enero sobre ventas $1.200.000",
+        "debe": 36000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "IIBB febrero sobre ventas $950.000",
+        "debe": 28500,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "IIBB marzo sobre ventas $1.100.000",
+        "debe": 33000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 97500,
+    "saldo_haber": 0,
+    "saldo_final": 97500,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      28500,
+      78000
+    ]
+  },
+  {
+    "id": "m022",
+    "nivel": "basico",
+    "titulo": "Sueldos y Jornales — gasto del período",
+    "cuenta_pregunta": "Sueldos y Jornales",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Sueldos brutos enero",
+        "debe": 380000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Sueldos brutos febrero",
+        "debe": 380000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Sueldos brutos marzo — con aumento 5%",
+        "debe": 399000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 1159000,
+    "saldo_haber": 0,
+    "saldo_final": 1159000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      380000,
+      927200
+    ]
+  },
+  {
+    "id": "m023",
+    "nivel": "basico",
+    "titulo": "Reserva Legal — distribución de ganancias",
+    "cuenta_pregunta": "Reserva Legal",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución reserva legal ejercicio anterior",
+        "debe": 0,
+        "haber": 85000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Constitución reserva legal ejercicio actual",
+        "debe": 0,
+        "haber": 113500
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 198500,
+    "saldo_final": 198500,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      85000,
+      158800
+    ]
+  },
+  {
+    "id": "m024",
+    "nivel": "basico",
+    "titulo": "Intereses a Pagar — devengamiento préstamo",
+    "cuenta_pregunta": "Intereses a Pagar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Devengamiento intereses enero",
+        "debe": 0,
+        "haber": 45000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Devengamiento intereses febrero",
+        "debe": 0,
+        "haber": 45000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago intereses enero y febrero",
+        "debe": 90000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Devengamiento intereses marzo",
+        "debe": 0,
+        "haber": 45000
+      }
+    ],
+    "saldo_debe": 90000,
+    "saldo_haber": 135000,
+    "saldo_final": 45000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      90000,
+      90000,
+      36000
+    ]
+  },
+  {
+    "id": "m025",
+    "nivel": "basico",
+    "titulo": "Provisión Aguinaldo (SAC) — acumulación",
+    "cuenta_pregunta": "Provisión Aguinaldo (SAC)",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Provisión SAC enero",
+        "debe": 0,
+        "haber": 31667
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Provisión SAC febrero",
+        "debe": 0,
+        "haber": 31667
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Provisión SAC marzo",
+        "debe": 0,
+        "haber": 31667
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Provisión SAC abril",
+        "debe": 0,
+        "haber": 31667
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Provisión SAC mayo",
+        "debe": 0,
+        "haber": 31667
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Pago SAC junio — liquidación",
+        "debe": 158335,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 158335,
+    "saldo_haber": 158335,
+    "saldo_final": 0,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      32001,
+      31667,
+      158335
+    ]
+  },
+  {
+    "id": "m026",
+    "nivel": "basico",
+    "titulo": "Gastos de Publicidad y Propaganda",
+    "cuenta_pregunta": "Gastos de Publicidad y Propaganda",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Campaña digital mes 1",
+        "debe": 180000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Campaña digital mes 2",
+        "debe": 180000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Aviso en diario local",
+        "debe": 45000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 405000,
+    "saldo_haber": 0,
+    "saldo_final": 405000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      180000,
+      324000
+    ]
+  },
+  {
+    "id": "m027",
+    "nivel": "basico",
+    "titulo": "Honorarios Contables y Legales",
+    "cuenta_pregunta": "Honorarios Contables y Legales",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Honorarios contador Q1",
+        "debe": 90000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Honorarios contador Q2",
+        "debe": 90000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Honorarios abogado — consultoría",
+        "debe": 120000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 300000,
+    "saldo_haber": 0,
+    "saldo_final": 300000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      90000,
+      240000
+    ]
+  },
+  {
+    "id": "m028",
+    "nivel": "basico",
+    "titulo": "Gastos de Luz, Gas y Agua",
+    "cuenta_pregunta": "Gastos de Luz, Gas y Agua",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Factura electricidad enero",
+        "debe": 28000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Factura gas enero",
+        "debe": 12000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Factura electricidad febrero",
+        "debe": 31000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Factura gas febrero",
+        "debe": 13500,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 84500,
+    "saldo_haber": 0,
+    "saldo_final": 84500,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      28000,
+      67600
+    ]
+  },
+  {
+    "id": "m029",
+    "nivel": "basico",
+    "titulo": "Deudores Morosos — reclasificación",
+    "cuenta_pregunta": "Deudores Morosos",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Reclasificación cliente A a moroso",
+        "debe": 200000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Reclasificación cliente B a moroso",
+        "debe": 150000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cobro extrajudicial cliente A",
+        "debe": 0,
+        "haber": 200000
+      }
+    ],
+    "saldo_debe": 350000,
+    "saldo_haber": 200000,
+    "saldo_final": 150000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      350000,
+      200000,
+      120000
+    ]
+  },
+  {
+    "id": "m030",
+    "nivel": "basico",
+    "titulo": "Resultados No Asignados (RNA)",
+    "cuenta_pregunta": "Resultados No Asignados",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Saldo inicial RNA — pérdida acumulada",
+        "debe": 300000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Absorción resultado del ejercicio positivo",
+        "debe": 0,
+        "haber": 567250
+      }
+    ],
+    "saldo_debe": 300000,
+    "saldo_haber": 567250,
+    "saldo_final": 267250,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      300000,
+      567250,
+      213800
+    ]
+  },
+  {
+    "id": "m031",
+    "nivel": "intermedio",
+    "titulo": "Caja — mes completo empresa comercial",
+    "cuenta_pregunta": "Caja",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Saldo inicial del mes",
+        "debe": 450000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Cobranza al contado ventas semana 1",
+        "debe": 820000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago proveedores facturas vencidas",
+        "debe": 0,
+        "haber": 600000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Cobranza al contado ventas semana 2",
+        "debe": 940000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Pago sueldos y cargas sociales",
+        "debe": 0,
+        "haber": 380000
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Cobranza al contado ventas semana 3",
+        "debe": 760000,
+        "haber": 0
+      },
+      {
+        "ref": "A7",
+        "descripcion": "Pago servicios e impuestos",
+        "debe": 0,
+        "haber": 145000
+      },
+      {
+        "ref": "A8",
+        "descripcion": "Depósito en banco para pago",
+        "debe": 0,
+        "haber": 1000000
+      }
+    ],
+    "saldo_debe": 2970000,
+    "saldo_haber": 2125000,
+    "saldo_final": 845000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      2970000,
+      1125000,
+      676000
+    ]
+  },
+  {
+    "id": "m032",
+    "nivel": "intermedio",
+    "titulo": "IVA — posición fiscal del mes",
+    "cuenta_pregunta": "IVA Débito Fiscal",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "IVA DF venta 1 ($1.050.000 × 21%)",
+        "debe": 0,
+        "haber": 220500
+      },
+      {
+        "ref": "A2",
+        "descripcion": "IVA DF venta 2 ($850.000 × 21%)",
+        "debe": 0,
+        "haber": 178500
+      },
+      {
+        "ref": "A3",
+        "descripcion": "IVA DF venta 3 ($620.000 × 21%)",
+        "debe": 0,
+        "haber": 130200
+      },
+      {
+        "ref": "A4",
+        "descripcion": "NC — devolución cliente ($100.000 × 21%)",
+        "debe": 21000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 21000,
+    "saldo_haber": 529200,
+    "saldo_final": 508200,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      21000,
+      178500,
+      406560
+    ]
+  },
+  {
+    "id": "m033",
+    "nivel": "intermedio",
+    "titulo": "IVA Crédito Fiscal — posición compradora",
+    "cuenta_pregunta": "IVA Crédito Fiscal",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "IVA CF compra mercadería grande",
+        "debe": 252000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "IVA CF compra insumos",
+        "debe": 63000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "IVA CF servicios tercerizados",
+        "debe": 42000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Compensación DF contra CF al presentar DDJJ",
+        "debe": 0,
+        "haber": 357000
+      }
+    ],
+    "saldo_debe": 357000,
+    "saldo_haber": 357000,
+    "saldo_final": 0,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      357000,
+      252000,
+      1
+    ]
+  },
+  {
+    "id": "m034",
+    "nivel": "intermedio",
+    "titulo": "Clientes — empresa con alta rotación",
+    "cuenta_pregunta": "Clientes",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Venta crédito semana 1",
+        "debe": 1200000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Cobro semana 1",
+        "debe": 0,
+        "haber": 1000000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Venta crédito semana 2",
+        "debe": 850000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Cobro semana 2 — parcial",
+        "debe": 0,
+        "haber": 700000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Venta crédito semana 3",
+        "debe": 960000,
+        "haber": 0
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Nota de crédito descuento comercial",
+        "debe": 0,
+        "haber": 96000
+      },
+      {
+        "ref": "A7",
+        "descripcion": "Cobro semana 3",
+        "debe": 0,
+        "haber": 864000
+      }
+    ],
+    "saldo_debe": 3010000,
+    "saldo_haber": 2660000,
+    "saldo_final": 350000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      3010000,
+      2050000,
+      280000
+    ]
+  },
+  {
+    "id": "m035",
+    "nivel": "intermedio",
+    "titulo": "Amortizaciones de Bienes de Uso — rodados",
+    "cuenta_pregunta": "Amortizaciones de Bienes de Uso",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Amortización rodado A — año 1",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Amortización inmueble — año 1",
+        "debe": 50000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Amortización equipos computación — año 1",
+        "debe": 180000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Amortización rodado A — año 2",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Amortización inmueble — año 2",
+        "debe": 50000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 520000,
+    "saldo_haber": 0,
+    "saldo_final": 520000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      180000,
+      416000
+    ]
+  },
+  {
+    "id": "m036",
+    "nivel": "intermedio",
+    "titulo": "Previsión para Deudores Incobrables — regularizador",
+    "cuenta_pregunta": "Previsión para Deudores Incobrables",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución previsión año anterior",
+        "debe": 0,
+        "haber": 80000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Constitución previsión año actual",
+        "debe": 0,
+        "haber": 25000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Castigo deudor incobrable — aplicación previsión",
+        "debe": 80000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 80000,
+    "saldo_haber": 105000,
+    "saldo_final": 25000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      80000,
+      20000,
+      30000
+    ]
+  },
+  {
+    "id": "m037",
+    "nivel": "intermedio",
+    "titulo": "Banco — con saldo en descubierto (acreedor)",
+    "cuenta_pregunta": "Banco Nación Cuenta Corriente",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Saldo inicial cuenta corriente",
+        "debe": 200000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Débito automático proveedores",
+        "debe": 0,
+        "haber": 500000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Acreditación transferencia cliente",
+        "debe": 0,
+        "haber": 150000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Débito débito automático impuestos",
+        "debe": 0,
+        "haber": 120000
+      }
+    ],
+    "saldo_debe": 200000,
+    "saldo_haber": 770000,
+    "saldo_final": 570000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      130000,
+      200000,
+      500000
+    ]
+  },
+  {
+    "id": "m038",
+    "nivel": "intermedio",
+    "titulo": "Rodados — valor neto contable",
+    "cuenta_pregunta": "Rodados",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra camioneta",
+        "debe": 3600000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Amort. acumulada año 1 (20%)",
+        "debe": 0,
+        "haber": 720000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Amort. acumulada año 2 (20%)",
+        "debe": 0,
+        "haber": 720000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Amort. acumulada año 3 (20%)",
+        "debe": 0,
+        "haber": 720000
+      }
+    ],
+    "saldo_debe": 3600000,
+    "saldo_haber": 2160000,
+    "saldo_final": 1440000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      3600000,
+      2160000,
+      1152000
+    ]
+  },
+  {
+    "id": "m039",
+    "nivel": "intermedio",
+    "titulo": "Acreedores Varios — servicios del trimestre",
+    "cuenta_pregunta": "Acreedores Varios",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Servicio limpieza enero a crédito",
+        "debe": 0,
+        "haber": 45000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Servicio seguridad enero",
+        "debe": 0,
+        "haber": 85000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago limpieza enero",
+        "debe": 45000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Servicio limpieza febrero",
+        "debe": 0,
+        "haber": 45000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Pago seguridad enero",
+        "debe": 85000,
+        "haber": 0
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Servicio seguridad febrero",
+        "debe": 0,
+        "haber": 85000
+      }
+    ],
+    "saldo_debe": 130000,
+    "saldo_haber": 260000,
+    "saldo_final": 130000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      85000,
+      104000,
+      156000
+    ]
+  },
+  {
+    "id": "m040",
+    "nivel": "intermedio",
+    "titulo": "Ingresos por Servicios — empresa de consultoría",
+    "cuenta_pregunta": "Ventas de Servicios",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Honorarios proyecto A — enero",
+        "debe": 0,
+        "haber": 420000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Honorarios proyecto B — enero",
+        "debe": 0,
+        "haber": 350000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Honorarios proyecto A — febrero",
+        "debe": 0,
+        "haber": 420000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "NC — ajuste factura proyecto B",
+        "debe": 35000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Honorarios proyecto C — febrero",
+        "debe": 0,
+        "haber": 280000
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Honorarios proyecto A — marzo",
+        "debe": 0,
+        "haber": 420000
+      }
+    ],
+    "saldo_debe": 35000,
+    "saldo_haber": 1890000,
+    "saldo_final": 1855000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      35000,
+      420000,
+      1484000
+    ]
+  },
+  {
+    "id": "m041",
+    "nivel": "intermedio",
+    "titulo": "Provisión Impuesto a las Ganancias",
+    "cuenta_pregunta": "Provisión Impuesto a las Ganancias",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Provisión impuesto 1° trimestre",
+        "debe": 0,
+        "haber": 142500
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Pago anticipo AFIP — imputa contra provisión",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Provisión impuesto 2° trimestre",
+        "debe": 0,
+        "haber": 142500
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Pago anticipo AFIP 2° trimestre",
+        "debe": 120000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Provisión impuesto 3° trimestre",
+        "debe": 0,
+        "haber": 142500
+      }
+    ],
+    "saldo_debe": 240000,
+    "saldo_haber": 427500,
+    "saldo_final": 187500,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      285000,
+      240000,
+      142500
+    ]
+  },
+  {
+    "id": "m042",
+    "nivel": "intermedio",
+    "titulo": "Documentos a Pagar — pagarés emitidos",
+    "cuenta_pregunta": "Documentos a Pagar",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Emisión pagaré proveedor A",
+        "debe": 0,
+        "haber": 800000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Emisión pagaré proveedor B",
+        "debe": 0,
+        "haber": 600000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cancelación pagaré proveedor A al vencimiento",
+        "debe": 800000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Renovación parcial pagaré proveedor B",
+        "debe": 200000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 1000000,
+    "saldo_haber": 1400000,
+    "saldo_final": 400000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      800000,
+      600000,
+      320000
+    ]
+  },
+  {
+    "id": "m043",
+    "nivel": "intermedio",
+    "titulo": "Gastos Bancarios — comisiones y mantenimiento",
+    "cuenta_pregunta": "Gastos Bancarios",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Comisión mantenimiento cuenta enero",
+        "debe": 8500,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Comisión transferencias enero",
+        "debe": 3200,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Comisión mantenimiento cuenta febrero",
+        "debe": 8500,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Comisión negociación cheque diferido",
+        "debe": 12000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Comisión mantenimiento cuenta marzo",
+        "debe": 8500,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 40700,
+    "saldo_haber": 0,
+    "saldo_final": 40700,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      8500,
+      32560
+    ]
+  },
+  {
+    "id": "m044",
+    "nivel": "intermedio",
+    "titulo": "Anticipo a Proveedores — compra de importación",
+    "cuenta_pregunta": "Anticipo a Proveedores",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Anticipo 30% importación maquinaria",
+        "debe": 540000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Anticipo adicional 20% por ajuste de precio",
+        "debe": 360000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Imputación anticipo a la factura final",
+        "debe": 0,
+        "haber": 900000
+      }
+    ],
+    "saldo_debe": 900000,
+    "saldo_haber": 900000,
+    "saldo_final": 0,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      900000,
+      540000,
+      1
+    ]
+  },
+  {
+    "id": "m045",
+    "nivel": "intermedio",
+    "titulo": "Acciones con Cotización — inversión transitoria",
+    "cuenta_pregunta": "Acciones con Cotización",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra acciones YPF",
+        "debe": 1200000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra acciones Banco Macro",
+        "debe": 800000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Venta acciones YPF (valor libro)",
+        "debe": 0,
+        "haber": 1200000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Compra acciones Pampa Energía",
+        "debe": 650000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 2650000,
+    "saldo_haber": 1200000,
+    "saldo_final": 1450000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      450000,
+      1200000,
+      800000
+    ]
+  },
+  {
+    "id": "m046",
+    "nivel": "intermedio",
+    "titulo": "Resultado del Ejercicio — cierre trimestral",
+    "cuenta_pregunta": "Resultado del Ejercicio",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Traspaso ventas al cierre",
+        "debe": 0,
+        "haber": 3500000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Traspaso otros ingresos al cierre",
+        "debe": 0,
+        "haber": 145000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Traspaso CMV al cierre",
+        "debe": 2100000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Traspaso sueldos al cierre",
+        "debe": 760000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Traspaso amortizaciones al cierre",
+        "debe": 185000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 3045000,
+    "saldo_haber": 3645000,
+    "saldo_final": 600000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      3145000,
+      2100000,
+      480000
+    ]
+  },
+  {
+    "id": "m047",
+    "nivel": "intermedio",
+    "titulo": "Diferencia de Cambio Positiva — tenencia USD",
+    "cuenta_pregunta": "Diferencia de Cambio Positiva",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Dcambio positiva enero — deuda en USD",
+        "debe": 0,
+        "haber": 85000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Dcambio positiva febrero",
+        "debe": 0,
+        "haber": 110000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Ajuste valuación plazo fijo en USD",
+        "debe": 0,
+        "haber": 65000
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 260000,
+    "saldo_final": 260000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      85000,
+      208000
+    ]
+  },
+  {
+    "id": "m048",
+    "nivel": "intermedio",
+    "titulo": "Flete y Transporte de Ventas",
+    "cuenta_pregunta": "Flete y Transporte de Ventas",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Flete despacho lote enero",
+        "debe": 45000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Flete urgente cliente VIP",
+        "debe": 18000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Flete mensual contrato logística",
+        "debe": 85000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Flete despacho lote febrero",
+        "debe": 45000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Flete mensual contrato logística",
+        "debe": 85000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 278000,
+    "saldo_haber": 0,
+    "saldo_final": 278000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      0,
+      85000,
+      222400
+    ]
+  },
+  {
+    "id": "m049",
+    "nivel": "intermedio",
+    "titulo": "Previsión para Indemnizaciones",
+    "cuenta_pregunta": "Previsión para Indemnizaciones",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución previsión despido empleado A",
+        "debe": 0,
+        "haber": 180000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Constitución previsión despido empleado B",
+        "debe": 0,
+        "haber": 250000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Pago efectivo indemnización empleado A",
+        "debe": 180000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Constitución previsión empleado C",
+        "debe": 0,
+        "haber": 320000
+      }
+    ],
+    "saldo_debe": 180000,
+    "saldo_haber": 750000,
+    "saldo_final": 570000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      180000,
+      320000,
+      456000
+    ]
+  },
+  {
+    "id": "m050",
+    "nivel": "intermedio",
+    "titulo": "Comisiones a Vendedores — mes activo",
+    "cuenta_pregunta": "Comisiones a Vendedores",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Comisiones vendedor A enero",
+        "debe": 85000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Comisiones vendedor B enero",
+        "debe": 62000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Comisiones vendedor A febrero",
+        "debe": 91000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Comisiones vendedor B febrero",
+        "debe": 58000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Ajuste negativo comisiones — devoluciones",
+        "debe": 0,
+        "haber": 15000
+      }
+    ],
+    "saldo_debe": 296000,
+    "saldo_haber": 15000,
+    "saldo_final": 281000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      85000,
+      62000,
+      224800
+    ]
+  },
+  {
+    "id": "m051",
+    "nivel": "avanzado",
+    "titulo": "Amortización Acumulada Inmuebles — 5 años",
+    "cuenta_pregunta": "Amortización Acumulada Inmuebles",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Amort. inmueble año 1 (2% valor $5.000.000)",
+        "debe": 0,
+        "haber": 100000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Amort. inmueble año 2",
+        "debe": 0,
+        "haber": 100000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Amort. inmueble año 3",
+        "debe": 0,
+        "haber": 100000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Amort. inmueble año 4",
+        "debe": 0,
+        "haber": 100000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Amort. inmueble año 5",
+        "debe": 0,
+        "haber": 100000
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 500000,
+    "saldo_final": 500000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      100000,
+      400000
+    ]
+  },
+  {
+    "id": "m052",
+    "nivel": "avanzado",
+    "titulo": "Banco — conciliación fin de mes",
+    "cuenta_pregunta": "Banco Nación Cuenta Corriente",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Saldo inicial según libros",
+        "debe": 1250000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Depósito cobro cliente por transferencia",
+        "debe": 890000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Débito pago proveedor por home banking",
+        "debe": 0,
+        "haber": 650000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Cheque N°4521 emitido aún no presentado",
+        "debe": 0,
+        "haber": 320000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Acreditación nota de crédito banco",
+        "debe": 45000,
+        "haber": 0
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Comisión mantenimiento débito automático",
+        "debe": 0,
+        "haber": 8500
+      },
+      {
+        "ref": "A7",
+        "descripcion": "Depósito cobro cliente efectivo",
+        "debe": 430000,
+        "haber": 0
+      },
+      {
+        "ref": "A8",
+        "descripcion": "Débito impuesto a los débitos y créditos",
+        "debe": 0,
+        "haber": 6500
+      }
+    ],
+    "saldo_debe": 2615000,
+    "saldo_haber": 985000,
+    "saldo_final": 1630000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      2185000,
+      1636000,
+      1304000
+    ]
+  },
+  {
+    "id": "m053",
+    "nivel": "avanzado",
+    "titulo": "Inmuebles — alta, mejoras y baja parcial",
+    "cuenta_pregunta": "Inmuebles",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra inmueble sede central",
+        "debe": 8000000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Obras de refacción capitalizadas",
+        "debe": 1200000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Ajuste revalúo técnico",
+        "debe": 2500000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Venta de una unidad (valor libro)",
+        "debe": 0,
+        "haber": 3600000
+      }
+    ],
+    "saldo_debe": 11700000,
+    "saldo_haber": 3600000,
+    "saldo_final": 8100000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      8000000,
+      2500000,
+      6480000
+    ]
+  },
+  {
+    "id": "m054",
+    "nivel": "avanzado",
+    "titulo": "Resultado del Ejercicio — cierre anual completo",
+    "cuenta_pregunta": "Resultado del Ejercicio",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Traspaso ventas totales del ejercicio",
+        "debe": 0,
+        "haber": 12500000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Traspaso otros ingresos",
+        "debe": 0,
+        "haber": 485000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Traspaso CMV total",
+        "debe": 7200000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Traspaso gastos de comercialización",
+        "debe": 1850000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Traspaso gastos de administración",
+        "debe": 1420000,
+        "haber": 0
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Traspaso gastos financieros",
+        "debe": 380000,
+        "haber": 0
+      },
+      {
+        "ref": "A7",
+        "descripcion": "Traspaso impuesto a las ganancias",
+        "debe": 567250,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 11417250,
+    "saldo_haber": 12985000,
+    "saldo_final": 1567750,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      11480000,
+      7200000,
+      1254200
+    ]
+  },
+  {
+    "id": "m055",
+    "nivel": "avanzado",
+    "titulo": "Mercaderías — empresa con alta rotación trimestral",
+    "cuenta_pregunta": "Mercaderías",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Stock inicial del trimestre",
+        "debe": 2400000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra lote enero",
+        "debe": 1800000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "CMV enero",
+        "debe": 0,
+        "haber": 1600000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Compra lote febrero",
+        "debe": 2100000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "CMV febrero",
+        "debe": 0,
+        "haber": 1900000
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Devolución compra proveedor",
+        "debe": 0,
+        "haber": 200000
+      },
+      {
+        "ref": "A7",
+        "descripcion": "Compra lote marzo",
+        "debe": 1650000,
+        "haber": 0
+      },
+      {
+        "ref": "A8",
+        "descripcion": "CMV marzo",
+        "debe": 0,
+        "haber": 1750000
+      },
+      {
+        "ref": "A9",
+        "descripcion": "Ajuste por desvalorización inventario",
+        "debe": 0,
+        "haber": 150000
+      }
+    ],
+    "saldo_debe": 7950000,
+    "saldo_haber": 5600000,
+    "saldo_final": 2350000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      7950000,
+      3600000,
+      1880000
+    ]
+  },
+  {
+    "id": "m056",
+    "nivel": "avanzado",
+    "titulo": "Capital Social — historia de aumentos",
+    "cuenta_pregunta": "Capital Social",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución sociedad",
+        "debe": 0,
+        "haber": 1000000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Aumento de capital — suscripción",
+        "debe": 0,
+        "haber": 500000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Capitalización de reserva facultativa",
+        "debe": 0,
+        "haber": 800000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Aumento capital — nuevos socios",
+        "debe": 0,
+        "haber": 1200000
+      }
+    ],
+    "saldo_debe": 0,
+    "saldo_haber": 3500000,
+    "saldo_final": 3500000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      0,
+      1000000,
+      2800000
+    ]
+  },
+  {
+    "id": "m057",
+    "nivel": "avanzado",
+    "titulo": "Préstamos Bancarios — largo plazo con cuotas",
+    "cuenta_pregunta": "Préstamos Bancarios",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Préstamo hipotecario recibido",
+        "debe": 0,
+        "haber": 10000000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Cuota 1 — amortización capital",
+        "debe": 250000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Cuota 2 — amortización capital",
+        "debe": 250000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Cuota 3 — amortización capital",
+        "debe": 250000,
+        "haber": 0
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Pago anticipado parcial",
+        "debe": 500000,
+        "haber": 0
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Cuota 4 — amortización capital",
+        "debe": 250000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 1500000,
+    "saldo_haber": 10000000,
+    "saldo_final": 8500000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      1500000,
+      10000000,
+      6800000
+    ]
+  },
+  {
+    "id": "m058",
+    "nivel": "avanzado",
+    "titulo": "Clientes + Previsión — visión neta",
+    "cuenta_pregunta": "Clientes",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Ventas a crédito Q1",
+        "debe": 4500000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Cobranzas Q1",
+        "debe": 0,
+        "haber": 3800000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Ventas a crédito Q2",
+        "debe": 5200000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Cobranzas Q2",
+        "debe": 0,
+        "haber": 4600000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Reclasificación morosos",
+        "debe": 0,
+        "haber": 350000
+      },
+      {
+        "ref": "A6",
+        "descripcion": "Notas de crédito — descuentos pronto pago",
+        "debe": 0,
+        "haber": 195000
+      }
+    ],
+    "saldo_debe": 9700000,
+    "saldo_haber": 8945000,
+    "saldo_final": 755000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      9700000,
+      5350000,
+      604000
+    ]
+  },
+  {
+    "id": "m059",
+    "nivel": "avanzado",
+    "titulo": "Equipos de Computación — ciclo completo",
+    "cuenta_pregunta": "Equipos de Computación",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Compra servidores",
+        "debe": 2400000,
+        "haber": 0
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Compra notebooks equipo comercial",
+        "debe": 1800000,
+        "haber": 0
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Amortización acumulada año 1 (33%)",
+        "debe": 0,
+        "haber": 1386000
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Baja equipo obsoleto — valor libro residual",
+        "debe": 0,
+        "haber": 180000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Amortización acumulada año 2",
+        "debe": 0,
+        "haber": 1386000
+      }
+    ],
+    "saldo_debe": 4200000,
+    "saldo_haber": 2952000,
+    "saldo_final": 1248000,
+    "tipo_saldo": "deudor",
+    "opciones_distractor": [
+      4200000,
+      2772000,
+      998400
+    ]
+  },
+  {
+    "id": "m060",
+    "nivel": "avanzado",
+    "titulo": "Reserva Facultativa — dinámica multianual",
+    "cuenta_pregunta": "Reserva Facultativa",
+    "asientos": [
+      {
+        "ref": "A1",
+        "descripcion": "Constitución reserva ejercicio 2022",
+        "debe": 0,
+        "haber": 250000
+      },
+      {
+        "ref": "A2",
+        "descripcion": "Constitución reserva ejercicio 2023",
+        "debe": 0,
+        "haber": 380000
+      },
+      {
+        "ref": "A3",
+        "descripcion": "Desafectación parcial para absorber pérdida",
+        "debe": 200000,
+        "haber": 0
+      },
+      {
+        "ref": "A4",
+        "descripcion": "Constitución reserva ejercicio 2024",
+        "debe": 0,
+        "haber": 420000
+      },
+      {
+        "ref": "A5",
+        "descripcion": "Capitalización de reserva",
+        "debe": 380000,
+        "haber": 0
+      }
+    ],
+    "saldo_debe": 580000,
+    "saldo_haber": 1050000,
+    "saldo_final": 470000,
+    "tipo_saldo": "acreedor",
+    "opciones_distractor": [
+      580000,
+      420000,
+      376000
+    ]
+  }
+]

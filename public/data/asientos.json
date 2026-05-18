@@ -1,1 +1,1605 @@
-[]
+[
+  {
+    "id": "a001",
+    "nivel": "basico",
+    "escenario": "La empresa vende mercaderías por $180.000 al contado. (Solo registrar el ingreso, sin CMV.)",
+    "pista": "Ingreso en Haber aumenta PN. Cobro en efectivo aumenta Activo → Debe.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 180000 }
+    ]
+  },
+  {
+    "id": "a002",
+    "nivel": "basico",
+    "escenario": "La empresa vende servicios al contado por $95.000.",
+    "pista": "El efectivo entra (Activo sube → Debe). El ingreso por servicios va al Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 95000 },
+      { "cuenta": "Ventas de Servicios", "lado": "haber", "importe": 95000 }
+    ]
+  },
+  {
+    "id": "a003",
+    "nivel": "basico",
+    "escenario": "La empresa vende mercaderías al contado por $240.000. Solo registrar el ingreso.",
+    "pista": "Caja aumenta (Activo → Debe). Ventas es ingreso → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 240000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 240000 }
+    ]
+  },
+  {
+    "id": "a004",
+    "nivel": "basico",
+    "escenario": "Se cobra a un cliente $75.000 en efectivo por una venta anterior registrada en Clientes.",
+    "pista": "El Activo Caja sube (Debe). El Activo Clientes baja (Haber).",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 75000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 75000 }
+    ]
+  },
+  {
+    "id": "a005",
+    "nivel": "basico",
+    "escenario": "Se cobra a un cliente $320.000 mediante transferencia bancaria (Banco Nación CC).",
+    "pista": "El banco aumenta (Activo → Debe). Clientes disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 320000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 320000 }
+    ]
+  },
+  {
+    "id": "a006",
+    "nivel": "basico",
+    "escenario": "Se cobra a un cliente $150.000 mediante cheque al día.",
+    "pista": "Valores a Depositar aumenta (Activo → Debe). Clientes disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Valores a Depositar", "lado": "debe", "importe": 150000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 150000 }
+    ]
+  },
+  {
+    "id": "a007",
+    "nivel": "basico",
+    "escenario": "Se paga a un proveedor $88.000 en efectivo.",
+    "pista": "Caja disminuye (Activo → Haber). Proveedores disminuye (Pasivo → Debe).",
+    "lineas": [
+      { "cuenta": "Proveedores", "lado": "debe", "importe": 88000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 88000 }
+    ]
+  },
+  {
+    "id": "a008",
+    "nivel": "basico",
+    "escenario": "Se paga a un proveedor $210.000 por transferencia (Banco Nación CC).",
+    "pista": "Proveedores disminuye (Pasivo → Debe). El banco disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Proveedores", "lado": "debe", "importe": 210000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 210000 }
+    ]
+  },
+  {
+    "id": "a009",
+    "nivel": "basico",
+    "escenario": "Se paga a un proveedor $560.000 mediante cheque (Banco Galicia CC).",
+    "pista": "Pasivo Proveedores baja → Debe. Activo Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Proveedores", "lado": "debe", "importe": 560000 },
+      { "cuenta": "Banco Galicia Cuenta Corriente", "lado": "haber", "importe": 560000 }
+    ]
+  },
+  {
+    "id": "a010",
+    "nivel": "basico",
+    "escenario": "Se compran mercaderías al contado por $130.000.",
+    "pista": "Mercaderías aumenta (Activo → Debe). Caja disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 130000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 130000 }
+    ]
+  },
+  {
+    "id": "a011",
+    "nivel": "basico",
+    "escenario": "Se compran mercaderías al contado por $275.000 pagando con cheque (Banco Nación CC).",
+    "pista": "Mercaderías sube (Activo → Debe). Banco baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 275000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 275000 }
+    ]
+  },
+  {
+    "id": "a012",
+    "nivel": "basico",
+    "escenario": "Se compran mercaderías a crédito por $400.000.",
+    "pista": "Mercaderías sube (Activo → Debe). Pasivo Proveedores sube (Pasivo → Haber).",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 400000 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 400000 }
+    ]
+  },
+  {
+    "id": "a013",
+    "nivel": "basico",
+    "escenario": "Se compran mercaderías a crédito por $185.000.",
+    "pista": "Activo Mercaderías aumenta → Debe. Pasivo Proveedores aumenta → Haber.",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 185000 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 185000 }
+    ]
+  },
+  {
+    "id": "a014",
+    "nivel": "basico",
+    "escenario": "Se pagan sueldos del mes por $350.000 en efectivo.",
+    "pista": "Gasto Sueldos y Jornales → Debe. Caja disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Sueldos y Jornales", "lado": "debe", "importe": 350000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 350000 }
+    ]
+  },
+  {
+    "id": "a015",
+    "nivel": "basico",
+    "escenario": "Se pagan sueldos por $480.000 mediante transferencia bancaria (Banco Provincia CC).",
+    "pista": "Gasto → Debe. Banco disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Sueldos y Jornales", "lado": "debe", "importe": 480000 },
+      { "cuenta": "Banco Provincia Cuenta Corriente", "lado": "haber", "importe": 480000 }
+    ]
+  },
+  {
+    "id": "a016",
+    "nivel": "basico",
+    "escenario": "Se paga el alquiler del mes por $120.000 en efectivo.",
+    "pista": "Gasto Alquileres Pagados → Debe. Caja disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Alquileres Pagados", "lado": "debe", "importe": 120000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 120000 }
+    ]
+  },
+  {
+    "id": "a017",
+    "nivel": "basico",
+    "escenario": "Se paga el alquiler del local comercial por $210.000 por transferencia bancaria.",
+    "pista": "Alquileres Pagados es gasto → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Alquileres Pagados", "lado": "debe", "importe": 210000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 210000 }
+    ]
+  },
+  {
+    "id": "a018",
+    "nivel": "basico",
+    "escenario": "Se paga una póliza de seguro anual por $96.000 al contado.",
+    "pista": "Seguros es gasto → Debe. Caja disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Seguros", "lado": "debe", "importe": 96000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 96000 }
+    ]
+  },
+  {
+    "id": "a019",
+    "nivel": "basico",
+    "escenario": "La empresa obtiene un préstamo bancario de $500.000 acreditado en Banco Nación CC.",
+    "pista": "Banco aumenta (Activo → Debe). Pasivo Préstamos Bancarios aumenta → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 500000 },
+      { "cuenta": "Préstamos Bancarios", "lado": "haber", "importe": 500000 }
+    ]
+  },
+  {
+    "id": "a020",
+    "nivel": "basico",
+    "escenario": "La empresa obtiene un préstamo bancario de $1.200.000 acreditado en Banco Galicia CC.",
+    "pista": "Activo Banco sube → Debe. Pasivo Préstamos Bancarios sube → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Galicia Cuenta Corriente", "lado": "debe", "importe": 1200000 },
+      { "cuenta": "Préstamos Bancarios", "lado": "haber", "importe": 1200000 }
+    ]
+  },
+  {
+    "id": "a021",
+    "nivel": "basico",
+    "escenario": "Se deposita en el Banco Nación CC $200.000 de efectivo de caja.",
+    "pista": "Un Activo sube (Banco → Debe) y otro baja (Caja → Haber). Permutativo.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 200000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 200000 }
+    ]
+  },
+  {
+    "id": "a022",
+    "nivel": "basico",
+    "escenario": "Se deposita $85.000 de efectivo en Banco Provincia Caja de Ahorro.",
+    "pista": "Banco sube (Activo → Debe). Caja baja (Activo → Haber). Solo movimiento entre activos.",
+    "lineas": [
+      { "cuenta": "Banco Nación Caja de Ahorro", "lado": "debe", "importe": 85000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 85000 }
+    ]
+  },
+  {
+    "id": "a023",
+    "nivel": "basico",
+    "escenario": "Se paga la factura de luz y gas del mes por $28.000 en efectivo.",
+    "pista": "Gasto Gastos de Luz, Gas y Agua → Debe. Caja disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Luz, Gas y Agua", "lado": "debe", "importe": 28000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 28000 }
+    ]
+  },
+  {
+    "id": "a024",
+    "nivel": "basico",
+    "escenario": "Se paga la factura de electricidad y gas por $45.000 por transferencia bancaria.",
+    "pista": "El gasto aumenta (Debe). El banco disminuye (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Gastos de Luz, Gas y Agua", "lado": "debe", "importe": 45000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 45000 }
+    ]
+  },
+  {
+    "id": "a025",
+    "nivel": "basico",
+    "escenario": "Se paga factura de agua del trimestre por $18.500 en efectivo.",
+    "pista": "Gasto → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Luz, Gas y Agua", "lado": "debe", "importe": 18500 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 18500 }
+    ]
+  },
+  {
+    "id": "a026",
+    "nivel": "basico",
+    "escenario": "Se pagan honorarios al contador por $65.000 en efectivo.",
+    "pista": "Honorarios Contables y Legales es gasto → Debe. Caja disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Honorarios Contables y Legales", "lado": "debe", "importe": 65000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 65000 }
+    ]
+  },
+  {
+    "id": "a027",
+    "nivel": "basico",
+    "escenario": "Se pagan honorarios al abogado por $90.000 por transferencia bancaria.",
+    "pista": "Gasto Honorarios Contables y Legales → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Honorarios Contables y Legales", "lado": "debe", "importe": 90000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 90000 }
+    ]
+  },
+  {
+    "id": "a028",
+    "nivel": "basico",
+    "escenario": "Se cobra al contado una comisión por intermediación de $40.000.",
+    "pista": "Caja sube (Activo → Debe). Ingresos por Comisiones → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 40000 },
+      { "cuenta": "Ingresos por Comisiones", "lado": "haber", "importe": 40000 }
+    ]
+  },
+  {
+    "id": "a029",
+    "nivel": "basico",
+    "escenario": "Se cobra un alquiler mensual de $55.000 en efectivo.",
+    "pista": "Caja aumenta (Activo → Debe). Alquileres Ganados es ingreso → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 55000 },
+      { "cuenta": "Alquileres Ganados", "lado": "haber", "importe": 55000 }
+    ]
+  },
+  {
+    "id": "a030",
+    "nivel": "basico",
+    "escenario": "Se paga la cuota mensual de la ART por $22.000 por débito bancario.",
+    "pista": "Gasto ART → Debe. Banco disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "ART (Aseguradora de Riesgos del Trabajo)", "lado": "debe", "importe": 22000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 22000 }
+    ]
+  },
+  {
+    "id": "a031",
+    "nivel": "basico",
+    "escenario": "Se paga publicidad en redes sociales por $38.000 al contado.",
+    "pista": "Gasto de Publicidad y Propaganda → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Publicidad y Propaganda", "lado": "debe", "importe": 38000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 38000 }
+    ]
+  },
+  {
+    "id": "a032",
+    "nivel": "basico",
+    "escenario": "Se paga el servicio de teléfono e internet del mes por $31.000 en efectivo.",
+    "pista": "Gasto Teléfono e Internet → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Teléfono e Internet", "lado": "debe", "importe": 31000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 31000 }
+    ]
+  },
+  {
+    "id": "a033",
+    "nivel": "basico",
+    "escenario": "La empresa recibe efectivo por $60.000 como anticipo de un cliente por un pedido futuro.",
+    "pista": "Caja sube (Activo → Debe). Anticipos de Clientes es un pasivo (obligación de entregar) → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 60000 },
+      { "cuenta": "Anticipos de Clientes", "lado": "haber", "importe": 60000 }
+    ]
+  },
+  {
+    "id": "a034",
+    "nivel": "basico",
+    "escenario": "Se retira $30.000 de la caja chica (Fondo Fijo) para gastos menores.",
+    "pista": "Fondo Fijo sube (Activo → Debe). Caja baja (Activo → Haber). Permutativo.",
+    "lineas": [
+      { "cuenta": "Fondo Fijo", "lado": "debe", "importe": 30000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 30000 }
+    ]
+  },
+  {
+    "id": "a035",
+    "nivel": "basico",
+    "escenario": "Se compra papelería y útiles de oficina por $12.500 en efectivo.",
+    "pista": "Gasto Papelería y Útiles de Oficina → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Papelería y Útiles de Oficina", "lado": "debe", "importe": 12500 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 12500 }
+    ]
+  },
+  {
+    "id": "a036",
+    "nivel": "basico",
+    "escenario": "Se pagan gastos de mantenimiento y reparaciones por $47.000 en efectivo.",
+    "pista": "Gasto Mantenimiento y Reparaciones → Debe. Caja baja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Mantenimiento y Reparaciones", "lado": "debe", "importe": 47000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 47000 }
+    ]
+  },
+  {
+    "id": "a037",
+    "nivel": "basico",
+    "escenario": "Se depositan cheques de clientes por $190.000 en Banco Nación CC (de Valores a Depositar).",
+    "pista": "Banco sube (Activo → Debe). Valores a Depositar baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 190000 },
+      { "cuenta": "Valores a Depositar", "lado": "haber", "importe": 190000 }
+    ]
+  },
+  {
+    "id": "a038",
+    "nivel": "basico",
+    "escenario": "Se venden mercaderías al contado por $310.000 mediante tarjeta de crédito.",
+    "pista": "Tarjetas de Crédito a Depositar sube (Activo → Debe). Ventas → Haber.",
+    "lineas": [
+      { "cuenta": "Tarjetas de Crédito a Depositar", "lado": "debe", "importe": 310000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 310000 }
+    ]
+  },
+  {
+    "id": "a039",
+    "nivel": "basico",
+    "escenario": "La empresa paga Ingresos Brutos por $15.000 en efectivo.",
+    "pista": "Gasto Ingresos Brutos → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Ingresos Brutos (IIBB)", "lado": "debe", "importe": 15000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 15000 }
+    ]
+  },
+  {
+    "id": "a040",
+    "nivel": "basico",
+    "escenario": "Se pagan impuestos y tasas municipales (ABL) por $9.800 por transferencia.",
+    "pista": "Gasto Impuestos y Tasas Municipales → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Impuestos y Tasas Municipales", "lado": "debe", "importe": 9800 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 9800 }
+    ]
+  },
+  {
+    "id": "a041",
+    "nivel": "basico",
+    "escenario": "Se cobra en efectivo $25.000 por prestación de servicios de soporte técnico.",
+    "pista": "Caja sube → Debe. Ingresos por Servicios de Soporte → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 25000 },
+      { "cuenta": "Ingresos por Servicios de Soporte", "lado": "haber", "importe": 25000 }
+    ]
+  },
+  {
+    "id": "a042",
+    "nivel": "basico",
+    "escenario": "Se pagan gastos de limpieza del mes por $14.000 al contado.",
+    "pista": "Gasto Limpieza → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Limpieza", "lado": "debe", "importe": 14000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 14000 }
+    ]
+  },
+  {
+    "id": "a043",
+    "nivel": "basico",
+    "escenario": "Se pagan gastos bancarios y comisiones por $5.200 debitados de la cuenta.",
+    "pista": "Gasto Gastos Bancarios → Debe. Banco baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Gastos Bancarios", "lado": "debe", "importe": 5200 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 5200 }
+    ]
+  },
+  {
+    "id": "a044",
+    "nivel": "basico",
+    "escenario": "Se entregan $20.000 como anticipo de sueldo a un empleado (Anticipo a Personal).",
+    "pista": "Anticipo a Personal sube (Activo → Debe). Caja baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Anticipo a Personal", "lado": "debe", "importe": 20000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 20000 }
+    ]
+  },
+  {
+    "id": "a045",
+    "nivel": "basico",
+    "escenario": "Se paga una factura pendiente de honorarios profesionales por $78.000 en efectivo.",
+    "pista": "Pasivo Honorarios Profesionales a Pagar disminuye → Debe. Caja disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Honorarios Profesionales a Pagar", "lado": "debe", "importe": 78000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 78000 }
+    ]
+  },
+  {
+    "id": "a046",
+    "nivel": "basico",
+    "escenario": "La empresa compra mercaderías a crédito por $520.000 firmando un pagaré.",
+    "pista": "Mercaderías sube (Activo → Debe). Documentos a Pagar sube (Pasivo → Haber).",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 520000 },
+      { "cuenta": "Documentos a Pagar", "lado": "haber", "importe": 520000 }
+    ]
+  },
+  {
+    "id": "a047",
+    "nivel": "basico",
+    "escenario": "Se cobra un pagaré de cliente (Documentos a Cobrar) por $145.000 en efectivo.",
+    "pista": "Caja sube (Activo → Debe). Documentos a Cobrar baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 145000 },
+      { "cuenta": "Documentos a Cobrar", "lado": "haber", "importe": 145000 }
+    ]
+  },
+  {
+    "id": "a048",
+    "nivel": "basico",
+    "escenario": "Se pagan gastos de viaje y movilidad del personal de ventas por $33.000 en efectivo.",
+    "pista": "Gasto Viaje y Movilidad → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Viaje y Movilidad", "lado": "debe", "importe": 33000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 33000 }
+    ]
+  },
+  {
+    "id": "a049",
+    "nivel": "basico",
+    "escenario": "Se vende mercadería al contado por $160.000 y el cliente paga con cheque de pago diferido.",
+    "pista": "Cheques de Pago Diferido sube (Activo → Debe). Ventas → Haber.",
+    "lineas": [
+      { "cuenta": "Cheques de Pago Diferido", "lado": "debe", "importe": 160000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 160000 }
+    ]
+  },
+  {
+    "id": "a050",
+    "nivel": "basico",
+    "escenario": "Se paga la deuda con un acreedor varios por $42.000 por transferencia bancaria.",
+    "pista": "Pasivo Acreedores Varios disminuye → Debe. Banco disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Acreedores Varios", "lado": "debe", "importe": 42000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 42000 }
+    ]
+  },
+  {
+    "id": "a051",
+    "nivel": "intermedio",
+    "escenario": "La empresa vende mercaderías a crédito por $600.000. El costo de dichas mercaderías es $380.000.",
+    "pista": "Registrar el ingreso (crédito a cliente) y el CMV (entrega de stock) en el mismo asiento.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 600000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 600000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 380000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 380000 }
+    ]
+  },
+  {
+    "id": "a052",
+    "nivel": "intermedio",
+    "escenario": "La empresa vende mercaderías al contado por $850.000. El costo de las mercaderías vendidas es $510.000.",
+    "pista": "Caja sube (ingreso). Ventas → Haber. CMV es el gasto del costo → Debe. Mercaderías baja → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 850000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 850000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 510000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 510000 }
+    ]
+  },
+  {
+    "id": "a053",
+    "nivel": "intermedio",
+    "escenario": "Se venden mercaderías a crédito por $1.200.000. El costo es $720.000.",
+    "pista": "Clientes sube → Debe. Ventas → Haber. CMV → Debe. Mercaderías baja → Haber.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 1200000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 1200000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 720000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 720000 }
+    ]
+  },
+  {
+    "id": "a054",
+    "nivel": "intermedio",
+    "escenario": "Se compra una computadora para administración a crédito por $480.000 más IVA CF de $100.800 (21%).",
+    "pista": "Bien de uso sube → Debe. IVA CF sube (crédito fiscal) → Debe. Proveedores sube (total) → Haber.",
+    "lineas": [
+      { "cuenta": "Equipos de Computación", "lado": "debe", "importe": 480000 },
+      { "cuenta": "IVA Crédito Fiscal", "lado": "debe", "importe": 100800 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 580800 }
+    ]
+  },
+  {
+    "id": "a055",
+    "nivel": "intermedio",
+    "escenario": "Se compra maquinaria a crédito por $2.000.000 más IVA CF del 21% ($420.000).",
+    "pista": "Maquinarias sube → Debe. IVA CF sube → Debe. Proveedores sube por el total → Haber.",
+    "lineas": [
+      { "cuenta": "Maquinarias", "lado": "debe", "importe": 2000000 },
+      { "cuenta": "IVA Crédito Fiscal", "lado": "debe", "importe": 420000 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 2420000 }
+    ]
+  },
+  {
+    "id": "a056",
+    "nivel": "intermedio",
+    "escenario": "Se venden mercaderías a crédito por $750.000 más IVA DF del 21% ($157.500). Total facturado $907.500.",
+    "pista": "Clientes sube por el total → Debe. Ventas → Haber (neto). IVA DB Fiscal → Haber.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 907500 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 750000 },
+      { "cuenta": "IVA Débito Fiscal", "lado": "haber", "importe": 157500 }
+    ]
+  },
+  {
+    "id": "a057",
+    "nivel": "intermedio",
+    "escenario": "Se venden servicios al contado por $400.000 más IVA DF del 21% ($84.000). Total cobrado $484.000.",
+    "pista": "Caja sube por el total → Debe. Ventas de Servicios → Haber. IVA Débito Fiscal → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 484000 },
+      { "cuenta": "Ventas de Servicios", "lado": "haber", "importe": 400000 },
+      { "cuenta": "IVA Débito Fiscal", "lado": "haber", "importe": 84000 }
+    ]
+  },
+  {
+    "id": "a058",
+    "nivel": "intermedio",
+    "escenario": "Se devengan sueldos del mes por $620.000. Cargas sociales patronales adicionales por $170.500 (27,5%).",
+    "pista": "Gasto Sueldos → Debe. Gasto Cargas Sociales → Debe. Pasivos: Sueldos a Pagar → Haber. Cargas Sociales a Pagar → Haber.",
+    "lineas": [
+      { "cuenta": "Sueldos y Jornales", "lado": "debe", "importe": 620000 },
+      { "cuenta": "Cargas Sociales", "lado": "debe", "importe": 170500 },
+      { "cuenta": "Sueldos a Pagar", "lado": "haber", "importe": 620000 },
+      { "cuenta": "Cargas Sociales a Pagar", "lado": "haber", "importe": 170500 }
+    ]
+  },
+  {
+    "id": "a059",
+    "nivel": "intermedio",
+    "escenario": "Se pagan los sueldos devengados del mes anterior ($620.000) por transferencia bancaria.",
+    "pista": "Sueldos a Pagar ya está registrado como pasivo. Al pagar, el pasivo disminuye → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Sueldos a Pagar", "lado": "debe", "importe": 620000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 620000 }
+    ]
+  },
+  {
+    "id": "a060",
+    "nivel": "intermedio",
+    "escenario": "Se registra la amortización mensual de: Rodados $25.000, Muebles y Útiles $8.333, Equipos de Computación $12.500.",
+    "pista": "Gasto Amortizaciones → Debe. Cada cuenta regularizadora (Amortización Acumulada) → Haber.",
+    "lineas": [
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "debe", "importe": 45833 },
+      { "cuenta": "Amortización Acumulada de Rodados", "lado": "haber", "importe": 25000 },
+      { "cuenta": "Amortización Acumulada de Muebles y Útiles", "lado": "haber", "importe": 8333 },
+      { "cuenta": "Amortización Acumulada de Equipos de Computación", "lado": "haber", "importe": 12500 }
+    ]
+  },
+  {
+    "id": "a061",
+    "nivel": "intermedio",
+    "escenario": "Se registra la amortización del mes: Maquinarias $41.667, Instalaciones $16.667.",
+    "pista": "Un único gasto de Amortizaciones → Debe. Cada cuenta regularizadora → Haber.",
+    "lineas": [
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "debe", "importe": 58334 },
+      { "cuenta": "Amortización Acumulada de Maquinarias", "lado": "haber", "importe": 41667 },
+      { "cuenta": "Amortización Acumulada de Instalaciones", "lado": "haber", "importe": 16667 }
+    ]
+  },
+  {
+    "id": "a062",
+    "nivel": "intermedio",
+    "escenario": "Un cliente paga $280.000 de una deuda de $300.000 aceptando un descuento de $20.000 por pronto pago.",
+    "pista": "Caja sube (lo cobrado). Descuentos Otorgados es el gasto del descuento financiero → Debe. Clientes baja por el total → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 280000 },
+      { "cuenta": "Descuentos Otorgados", "lado": "debe", "importe": 20000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 300000 }
+    ]
+  },
+  {
+    "id": "a063",
+    "nivel": "intermedio",
+    "escenario": "La empresa paga $390.000 de una deuda de $420.000 con un proveedor, quien otorga un descuento de $30.000 por pago anticipado.",
+    "pista": "Proveedores baja por el total → Debe. Banco baja solo por lo pagado → Haber. Descuentos Obtenidos es ingreso → Haber.",
+    "lineas": [
+      { "cuenta": "Proveedores", "lado": "debe", "importe": 420000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 390000 },
+      { "cuenta": "Descuentos Obtenidos", "lado": "haber", "importe": 30000 }
+    ]
+  },
+  {
+    "id": "a064",
+    "nivel": "intermedio",
+    "escenario": "Se compran mercaderías por $800.000 pagando $300.000 al contado (Banco) y el resto a crédito.",
+    "pista": "Mercaderías sube → Debe. Banco baja → Haber. Proveedores sube por el saldo → Haber.",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 800000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 300000 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 500000 }
+    ]
+  },
+  {
+    "id": "a065",
+    "nivel": "intermedio",
+    "escenario": "Se compran bienes de uso (Muebles y Útiles) por $360.000 pagando $160.000 al contado y el resto con pagaré.",
+    "pista": "Muebles y Útiles sube → Debe. Caja baja → Haber. Documentos a Pagar sube → Haber.",
+    "lineas": [
+      { "cuenta": "Muebles y Útiles", "lado": "debe", "importe": 360000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 160000 },
+      { "cuenta": "Documentos a Pagar", "lado": "haber", "importe": 200000 }
+    ]
+  },
+  {
+    "id": "a066",
+    "nivel": "intermedio",
+    "escenario": "Se constituye un plazo fijo por $500.000 transfiriendo fondos del Banco Nación CC.",
+    "pista": "Plazo Fijo sube (Activo → Debe). Banco baja (Activo → Haber). Permutativo de activos.",
+    "lineas": [
+      { "cuenta": "Plazo Fijo", "lado": "debe", "importe": 500000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 500000 }
+    ]
+  },
+  {
+    "id": "a067",
+    "nivel": "intermedio",
+    "escenario": "Vence un plazo fijo de $500.000 con intereses de $42.000. Se acredita el total en Banco Nación CC.",
+    "pista": "Banco sube por el total → Debe. Plazo Fijo baja → Haber. Intereses Ganados → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 542000 },
+      { "cuenta": "Plazo Fijo", "lado": "haber", "importe": 500000 },
+      { "cuenta": "Intereses Ganados", "lado": "haber", "importe": 42000 }
+    ]
+  },
+  {
+    "id": "a068",
+    "nivel": "intermedio",
+    "escenario": "Se constituye una previsión para deudores incobrables por $45.000 (estimación del 2% de Clientes).",
+    "pista": "Cargo por Deudores Incobrables es gasto → Debe. Previsión para Deudores Incobrables (activo regularizador) → Haber.",
+    "lineas": [
+      { "cuenta": "Cargo por Deudores Incobrables", "lado": "debe", "importe": 45000 },
+      { "cuenta": "Previsión para Deudores Incobrables", "lado": "haber", "importe": 45000 }
+    ]
+  },
+  {
+    "id": "a069",
+    "nivel": "intermedio",
+    "escenario": "Se da de baja (castiga) un cliente incobrable por $28.000. Existe previsión suficiente para cubrirlo.",
+    "pista": "La Previsión absorbe la pérdida → Debe (disminuye el regularizador). Clientes baja → Haber.",
+    "lineas": [
+      { "cuenta": "Previsión para Deudores Incobrables", "lado": "debe", "importe": 28000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 28000 }
+    ]
+  },
+  {
+    "id": "a070",
+    "nivel": "intermedio",
+    "escenario": "Un cliente devuelve mercaderías por $80.000 (venta a crédito). Se registra solo la devolución del ingreso.",
+    "pista": "Devoluciones sobre Ventas es regularizador de ingresos → Debe. Clientes baja → Haber.",
+    "lineas": [
+      { "cuenta": "Devoluciones sobre Ventas", "lado": "debe", "importe": 80000 },
+      { "cuenta": "Clientes", "lado": "haber", "importe": 80000 }
+    ]
+  },
+  {
+    "id": "a071",
+    "nivel": "intermedio",
+    "escenario": "La empresa devuelve mercaderías al proveedor por $55.000 (compra a crédito). Solo registrar la devolución.",
+    "pista": "Proveedores disminuye (ya no debemos ese monto) → Debe. Mercaderías disminuye → Haber.",
+    "lineas": [
+      { "cuenta": "Proveedores", "lado": "debe", "importe": 55000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 55000 }
+    ]
+  },
+  {
+    "id": "a072",
+    "nivel": "intermedio",
+    "escenario": "Se recibe un anticipo de $120.000 de un cliente por transferencia bancaria, por un pedido a entregar en 30 días.",
+    "pista": "Banco sube → Debe. Anticipos de Clientes es pasivo (obligación futura) → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 120000 },
+      { "cuenta": "Anticipos de Clientes", "lado": "haber", "importe": 120000 }
+    ]
+  },
+  {
+    "id": "a073",
+    "nivel": "intermedio",
+    "escenario": "Se entrega la mercadería del pedido y se aplica el anticipo de $120.000 registrado previamente. El total de la venta es $120.000.",
+    "pista": "Se cancela el pasivo (Anticipos de Clientes) → Debe. Ventas → Haber. Ya no hay saldo pendiente.",
+    "lineas": [
+      { "cuenta": "Anticipos de Clientes", "lado": "debe", "importe": 120000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 120000 }
+    ]
+  },
+  {
+    "id": "a074",
+    "nivel": "intermedio",
+    "escenario": "Se devengan intereses a pagar sobre un préstamo bancario por $38.000 al cierre del mes.",
+    "pista": "Intereses Pagados es gasto → Debe. Intereses a Pagar (pasivo) sube → Haber.",
+    "lineas": [
+      { "cuenta": "Intereses Pagados", "lado": "debe", "importe": 38000 },
+      { "cuenta": "Intereses a Pagar", "lado": "haber", "importe": 38000 }
+    ]
+  },
+  {
+    "id": "a075",
+    "nivel": "intermedio",
+    "escenario": "Se paga un préstamo bancario de $300.000 más intereses devengados de $38.000 (ya provisionados).",
+    "pista": "Préstamos Bancarios disminuye → Debe. Intereses a Pagar disminuye → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Préstamos Bancarios", "lado": "debe", "importe": 300000 },
+      { "cuenta": "Intereses a Pagar", "lado": "debe", "importe": 38000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 338000 }
+    ]
+  },
+  {
+    "id": "a076",
+    "nivel": "intermedio",
+    "escenario": "Se devengan sueldos de $740.000 y cargas sociales patronales de $203.500 (27,5%). Los aportes retenidos al personal son $148.000.",
+    "pista": "Sueldos brutos → gasto Debe. Cargas sociales → gasto Debe. Sueldos a Pagar (neto de retenciones) → Haber. Aportes retenidos → Haber. Cargas Sociales a Pagar → Haber.",
+    "lineas": [
+      { "cuenta": "Sueldos y Jornales", "lado": "debe", "importe": 740000 },
+      { "cuenta": "Cargas Sociales", "lado": "debe", "importe": 203500 },
+      { "cuenta": "Sueldos a Pagar", "lado": "haber", "importe": 592000 },
+      { "cuenta": "Aportes de Empleados a Depositar", "lado": "haber", "importe": 148000 },
+      { "cuenta": "Cargas Sociales a Pagar", "lado": "haber", "importe": 203500 }
+    ]
+  },
+  {
+    "id": "a077",
+    "nivel": "intermedio",
+    "escenario": "Se compran mercaderías a crédito por $650.000 más IVA CF de $136.500 (21%). Total factura $786.500.",
+    "pista": "Mercaderías sube (neto) → Debe. IVA CF sube → Debe. Proveedores sube (total) → Haber.",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 650000 },
+      { "cuenta": "IVA Crédito Fiscal", "lado": "debe", "importe": 136500 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 786500 }
+    ]
+  },
+  {
+    "id": "a078",
+    "nivel": "intermedio",
+    "escenario": "Se venden mercaderías al contado por $900.000 más IVA DF de $189.000 (21%). El costo es $540.000.",
+    "pista": "Caja sube por total → Debe. Ventas neto → Haber. IVA DB → Haber. CMV → Debe. Mercaderías baja → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 1089000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 900000 },
+      { "cuenta": "IVA Débito Fiscal", "lado": "haber", "importe": 189000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 540000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 540000 }
+    ]
+  },
+  {
+    "id": "a079",
+    "nivel": "intermedio",
+    "escenario": "Al cierre del mes se devenga el SAC (aguinaldo) correspondiente: $51.667 (1/12 del mejor sueldo mensual $620.000).",
+    "pista": "SAC es gasto → Debe. Provisión Aguinaldo (SAC) es pasivo → Haber.",
+    "lineas": [
+      { "cuenta": "Sueldo Anual Complementario (SAC)", "lado": "debe", "importe": 51667 },
+      { "cuenta": "Provisión Aguinaldo (SAC)", "lado": "haber", "importe": 51667 }
+    ]
+  },
+  {
+    "id": "a080",
+    "nivel": "intermedio",
+    "escenario": "Se registra la provisión para vacaciones del mes: $24.500.",
+    "pista": "El gasto por vacaciones se reconoce mensualmente → Debe. Provisión Vacaciones (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Sueldos y Jornales", "lado": "debe", "importe": 24500 },
+      { "cuenta": "Provisión Vacaciones", "lado": "haber", "importe": 24500 }
+    ]
+  },
+  {
+    "id": "a081",
+    "nivel": "intermedio",
+    "escenario": "Un cliente devuelve mercaderías por $95.000 (venta al contado). Se reintegra el efectivo.",
+    "pista": "Devoluciones sobre Ventas → Debe. Caja disminuye (reintegro) → Haber.",
+    "lineas": [
+      { "cuenta": "Devoluciones sobre Ventas", "lado": "debe", "importe": 95000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 95000 }
+    ]
+  },
+  {
+    "id": "a082",
+    "nivel": "intermedio",
+    "escenario": "Se paga una cuota de préstamo bancario: capital $180.000 más intereses $22.000. Total $202.000 por transferencia.",
+    "pista": "Préstamos Bancarios (capital) disminuye → Debe. Intereses Pagados (gasto) → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Préstamos Bancarios", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Intereses Pagados", "lado": "debe", "importe": 22000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 202000 }
+    ]
+  },
+  {
+    "id": "a083",
+    "nivel": "intermedio",
+    "escenario": "Se vende mercadería a crédito por $440.000 más IVA DF $92.400 (21%). El costo es $264.000. Total facturado $532.400.",
+    "pista": "Clientes sube por total → Debe. Ventas neto → Haber. IVA DB → Haber. CMV → Debe. Mercaderías baja → Haber.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 532400 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 440000 },
+      { "cuenta": "IVA Débito Fiscal", "lado": "haber", "importe": 92400 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 264000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 264000 }
+    ]
+  },
+  {
+    "id": "a084",
+    "nivel": "intermedio",
+    "escenario": "Se paga el seguro prepago anual de $144.000 y se registra como activo diferido.",
+    "pista": "Seguros Pagados por Adelantado sube (Activo → Debe). Banco o Caja baja → Haber.",
+    "lineas": [
+      { "cuenta": "Seguros Pagados por Adelantado", "lado": "debe", "importe": 144000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 144000 }
+    ]
+  },
+  {
+    "id": "a085",
+    "nivel": "intermedio",
+    "escenario": "Al cierre del mes se devenga 1/12 del seguro prepago: $12.000.",
+    "pista": "Seguros (gasto) → Debe. Seguros Pagados por Adelantado (activo diferido) → Haber.",
+    "lineas": [
+      { "cuenta": "Seguros", "lado": "debe", "importe": 12000 },
+      { "cuenta": "Seguros Pagados por Adelantado", "lado": "haber", "importe": 12000 }
+    ]
+  },
+  {
+    "id": "a086",
+    "nivel": "intermedio",
+    "escenario": "Se cobra un alquiler adelantado de $180.000 por tres meses. Solo registrar el cobro inicial.",
+    "pista": "Caja sube → Debe. Ingresos Cobrados por Adelantado (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Ingresos Cobrados por Adelantado", "lado": "haber", "importe": 180000 }
+    ]
+  },
+  {
+    "id": "a087",
+    "nivel": "intermedio",
+    "escenario": "Al cierre de cada mes se devenga 1/3 del alquiler cobrado por adelantado ($60.000).",
+    "pista": "El pasivo se consume parcialmente → Debe. Alquileres Ganados → Haber.",
+    "lineas": [
+      { "cuenta": "Ingresos Cobrados por Adelantado", "lado": "debe", "importe": 60000 },
+      { "cuenta": "Alquileres Ganados", "lado": "haber", "importe": 60000 }
+    ]
+  },
+  {
+    "id": "a088",
+    "nivel": "intermedio",
+    "escenario": "Se registra la amortización mensual de software por $8.333 e intangibles (marcas y patentes) por $5.000.",
+    "pista": "Amortizaciones de Activos Intangibles → Debe. Cada cuenta regularizadora → Haber.",
+    "lineas": [
+      { "cuenta": "Amortizaciones de Activos Intangibles", "lado": "debe", "importe": 13333 },
+      { "cuenta": "Amortización Acumulada de Software", "lado": "haber", "importe": 8333 },
+      { "cuenta": "Amortización Acumulada de Marcas y Patentes", "lado": "haber", "importe": 5000 }
+    ]
+  },
+  {
+    "id": "a089",
+    "nivel": "intermedio",
+    "escenario": "Se compran rodados (camioneta) por $3.600.000: $1.000.000 al contado y $2.600.000 a través de un préstamo prendario.",
+    "pista": "Rodados sube → Debe. Banco baja → Haber. Deudas Prendarias sube → Haber.",
+    "lineas": [
+      { "cuenta": "Rodados", "lado": "debe", "importe": 3600000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 1000000 },
+      { "cuenta": "Deudas Prendarias", "lado": "haber", "importe": 2600000 }
+    ]
+  },
+  {
+    "id": "a090",
+    "nivel": "intermedio",
+    "escenario": "Se devengan intereses a cobrar sobre un préstamo otorgado a un cliente: $15.000.",
+    "pista": "Intereses a Cobrar sube (Activo → Debe). Intereses Ganados → Haber.",
+    "lineas": [
+      { "cuenta": "Intereses a Cobrar", "lado": "debe", "importe": 15000 },
+      { "cuenta": "Intereses Ganados", "lado": "haber", "importe": 15000 }
+    ]
+  },
+  {
+    "id": "a091",
+    "nivel": "intermedio",
+    "escenario": "Se pagan honorarios a directores por $250.000 aprobados en asamblea (ya provisionados).",
+    "pista": "Honorarios Directores a Pagar (pasivo) disminuye → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Honorarios Directores a Pagar", "lado": "debe", "importe": 250000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 250000 }
+    ]
+  },
+  {
+    "id": "a092",
+    "nivel": "intermedio",
+    "escenario": "Se venden mercaderías a crédito por $480.000. El costo es $288.000. Se da descuento comercial de $24.000 en factura.",
+    "pista": "Clientes sube por el neto ($456.000). Ventas neto. CMV → Debe. Mercaderías → Haber. El descuento en factura se deduce de Ventas directamente.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 456000 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 456000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 288000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 288000 }
+    ]
+  },
+  {
+    "id": "a093",
+    "nivel": "intermedio",
+    "escenario": "Se constituye plazo fijo en dólares por $800.000 (equivalente pesos) transfiriendo desde Banco Nación CC.",
+    "pista": "Plazo Fijo en Dólares sube (Activo → Debe). Banco baja (Activo → Haber).",
+    "lineas": [
+      { "cuenta": "Plazo Fijo en Dólares", "lado": "debe", "importe": 800000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 800000 }
+    ]
+  },
+  {
+    "id": "a094",
+    "nivel": "intermedio",
+    "escenario": "Se pagan comisiones a vendedores por $72.000 al contado.",
+    "pista": "Gasto Comisiones a Vendedores → Debe. Caja baja → Haber.",
+    "lineas": [
+      { "cuenta": "Comisiones a Vendedores", "lado": "debe", "importe": 72000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 72000 }
+    ]
+  },
+  {
+    "id": "a095",
+    "nivel": "intermedio",
+    "escenario": "Se devenga el alquiler del mes $115.000, aún no pagado.",
+    "pista": "Gasto Alquileres Pagados → Debe. Alquileres a Pagar (pasivo) sube → Haber.",
+    "lineas": [
+      { "cuenta": "Alquileres Pagados", "lado": "debe", "importe": 115000 },
+      { "cuenta": "Alquileres a Pagar", "lado": "haber", "importe": 115000 }
+    ]
+  },
+  {
+    "id": "a096",
+    "nivel": "intermedio",
+    "escenario": "Se pagan los fletes de distribución de mercaderías del mes por $58.000.",
+    "pista": "Gasto Flete y Transporte de Ventas → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Flete y Transporte de Ventas", "lado": "debe", "importe": 58000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 58000 }
+    ]
+  },
+  {
+    "id": "a097",
+    "nivel": "intermedio",
+    "escenario": "Se registra la provisión para el impuesto a las ganancias del ejercicio por $320.000.",
+    "pista": "Gasto Impuesto a las Ganancias → Debe. Provisión Impuesto a las Ganancias (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Impuesto a las Ganancias", "lado": "debe", "importe": 320000 },
+      { "cuenta": "Provisión Impuesto a las Ganancias", "lado": "haber", "importe": 320000 }
+    ]
+  },
+  {
+    "id": "a098",
+    "nivel": "intermedio",
+    "escenario": "Se pagan flete y embalaje de una venta por $34.000 en efectivo.",
+    "pista": "Gastos de Embalaje y flete → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Embalaje", "lado": "debe", "importe": 18000 },
+      { "cuenta": "Flete y Transporte de Ventas", "lado": "debe", "importe": 16000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 34000 }
+    ]
+  },
+  {
+    "id": "a099",
+    "nivel": "intermedio",
+    "escenario": "Se registra una diferencia de cambio negativa de $62.000 sobre una deuda en dólares al cierre.",
+    "pista": "Diferencia de Cambio Negativa es gasto → Debe. Proveedores sube (mayor deuda en pesos) → Haber.",
+    "lineas": [
+      { "cuenta": "Diferencia de Cambio Negativa", "lado": "debe", "importe": 62000 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 62000 }
+    ]
+  },
+  {
+    "id": "a100",
+    "nivel": "intermedio",
+    "escenario": "Se registra una diferencia de cambio positiva de $48.000 sobre un crédito en dólares al cierre.",
+    "pista": "Clientes sube (mayor valor en pesos) → Debe. Diferencia de Cambio Positiva es ingreso → Haber.",
+    "lineas": [
+      { "cuenta": "Clientes", "lado": "debe", "importe": 48000 },
+      { "cuenta": "Diferencia de Cambio Positiva", "lado": "haber", "importe": 48000 }
+    ]
+  },
+  {
+    "id": "a101",
+    "nivel": "intermedio",
+    "escenario": "Se abonan adelantos de Ingresos Brutos (percepciones sufridas) por $27.000 debitados del banco.",
+    "pista": "Saldo a Favor ARBA (IIBB) sube (Activo → Debe). Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Saldo a Favor ARBA (IIBB)", "lado": "debe", "importe": 27000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 27000 }
+    ]
+  },
+  {
+    "id": "a102",
+    "nivel": "intermedio",
+    "escenario": "Se pagan anticipos del impuesto a las ganancias por $85.000 por transferencia bancaria.",
+    "pista": "Anticipo Impuesto a las Ganancias sube (Activo → Debe). Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Anticipo Impuesto a las Ganancias", "lado": "debe", "importe": 85000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 85000 }
+    ]
+  },
+  {
+    "id": "a103",
+    "nivel": "intermedio",
+    "escenario": "Se registra la indemnización por despido sin causa de un empleado: $180.000, a pagar en 30 días.",
+    "pista": "Indemnizaciones por Despido es gasto → Debe. Gastos a Pagar o Acreedores Varios (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Indemnizaciones por Despido", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Acreedores Varios", "lado": "haber", "importe": 180000 }
+    ]
+  },
+  {
+    "id": "a104",
+    "nivel": "intermedio",
+    "escenario": "Se pagan gastos de capacitación del personal por $42.000 al contado.",
+    "pista": "Gasto Capacitación y Formación → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Capacitación y Formación", "lado": "debe", "importe": 42000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 42000 }
+    ]
+  },
+  {
+    "id": "a105",
+    "nivel": "intermedio",
+    "escenario": "Se compra un rodado (auto de empresa) por $1.800.000 al contado (Banco Nación CC). Sin IVA (exento).",
+    "pista": "Rodados sube (Activo → Debe). Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Rodados", "lado": "debe", "importe": 1800000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 1800000 }
+    ]
+  },
+  {
+    "id": "a106",
+    "nivel": "intermedio",
+    "escenario": "Se registra la amortización mensual del rodado adquirido ($1.800.000 / 60 meses = $30.000).",
+    "pista": "Amortizaciones de Bienes de Uso → Debe. Amortización Acumulada de Rodados → Haber.",
+    "lineas": [
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "debe", "importe": 30000 },
+      { "cuenta": "Amortización Acumulada de Rodados", "lado": "haber", "importe": 30000 }
+    ]
+  },
+  {
+    "id": "a107",
+    "nivel": "intermedio",
+    "escenario": "Se compran instalaciones en el local a crédito por $560.000 más IVA CF $117.600 (21%). Total $677.600.",
+    "pista": "Instalaciones sube → Debe. IVA CF sube → Debe. Proveedores sube por total → Haber.",
+    "lineas": [
+      { "cuenta": "Instalaciones", "lado": "debe", "importe": 560000 },
+      { "cuenta": "IVA Crédito Fiscal", "lado": "debe", "importe": 117600 },
+      { "cuenta": "Proveedores", "lado": "haber", "importe": 677600 }
+    ]
+  },
+  {
+    "id": "a108",
+    "nivel": "intermedio",
+    "escenario": "Se cobra en efectivo $55.000 de una deuda que había sido castigada como incobrable (sin previsión).",
+    "pista": "Caja sube → Debe. Recupero de Deudores Incobrables es ingreso no ordinario → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 55000 },
+      { "cuenta": "Recupero de Deudores Incobrables", "lado": "haber", "importe": 55000 }
+    ]
+  },
+  {
+    "id": "a109",
+    "nivel": "intermedio",
+    "escenario": "Se registra la provisión mensual para indemnizaciones por despido del personal: $35.000.",
+    "pista": "Indemnizaciones por Despido (gasto) → Debe. Previsión para Indemnizaciones (pasivo no corriente) → Haber.",
+    "lineas": [
+      { "cuenta": "Indemnizaciones por Despido", "lado": "debe", "importe": 35000 },
+      { "cuenta": "Previsión para Indemnizaciones", "lado": "haber", "importe": 35000 }
+    ]
+  },
+  {
+    "id": "a110",
+    "nivel": "intermedio",
+    "escenario": "Se pagan multas fiscales por presentación tardía de la DDJJ: $18.500 al contado.",
+    "pista": "Multas y Recargos Fiscales es gasto no ordinario → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Multas y Recargos Fiscales", "lado": "debe", "importe": 18500 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 18500 }
+    ]
+  },
+  {
+    "id": "a111",
+    "nivel": "intermedio",
+    "escenario": "Se vende al contado mercadería por $350.000 con CMV de $210.000 y se cobra también IVA DF $73.500 (21%). Total cobrado $423.500.",
+    "pista": "Caja sube por total → Debe. Ventas neto → Haber. IVA DB → Haber. CMV → Debe. Mercaderías → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 423500 },
+      { "cuenta": "Ventas", "lado": "haber", "importe": 350000 },
+      { "cuenta": "IVA Débito Fiscal", "lado": "haber", "importe": 73500 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "debe", "importe": 210000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 210000 }
+    ]
+  },
+  {
+    "id": "a112",
+    "nivel": "intermedio",
+    "escenario": "Se recibe una subvención gubernamental de $200.000 acreditada en el banco.",
+    "pista": "Banco sube → Debe. Subvenciones y Subsidios Ganados → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 200000 },
+      { "cuenta": "Subvenciones y Subsidios Ganados", "lado": "haber", "importe": 200000 }
+    ]
+  },
+  {
+    "id": "a113",
+    "nivel": "intermedio",
+    "escenario": "Se pagan gastos de representación institucional por $65.000 al contado.",
+    "pista": "Gasto Representación → Debe. Caja → Haber.",
+    "lineas": [
+      { "cuenta": "Gastos de Representación", "lado": "debe", "importe": 65000 },
+      { "cuenta": "Caja", "lado": "haber", "importe": 65000 }
+    ]
+  },
+  {
+    "id": "a114",
+    "nivel": "intermedio",
+    "escenario": "Se adquieren acciones con cotización como inversión de corto plazo por $450.000 al contado.",
+    "pista": "Acciones con Cotización sube (Activo → Debe). Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Acciones con Cotización", "lado": "debe", "importe": 450000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 450000 }
+    ]
+  },
+  {
+    "id": "a115",
+    "nivel": "intermedio",
+    "escenario": "Se registra el resultado por tenencia de acciones: sube su cotización en $38.000.",
+    "pista": "Acciones con Cotización sube → Debe. Resultado por Tenencia de Títulos y Acciones → Haber.",
+    "lineas": [
+      { "cuenta": "Acciones con Cotización", "lado": "debe", "importe": 38000 },
+      { "cuenta": "Resultado por Tenencia de Títulos y Acciones", "lado": "haber", "importe": 38000 }
+    ]
+  },
+  {
+    "id": "a116",
+    "nivel": "intermedio",
+    "escenario": "Se registra el devengamiento mensual del impuesto de sellos sobre un contrato firmado: $8.200.",
+    "pista": "Impuesto de Sellos es gasto → Debe. Impuesto de Sellos a Pagar (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Impuesto de Sellos", "lado": "debe", "importe": 8200 },
+      { "cuenta": "Impuesto de Sellos a Pagar", "lado": "haber", "importe": 8200 }
+    ]
+  },
+  {
+    "id": "a117",
+    "nivel": "intermedio",
+    "escenario": "Se pagan dividendos declarados por asamblea por $400.000 transferidos a los accionistas.",
+    "pista": "Dividendos a Pagar (pasivo ya declarado) disminuye → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Dividendos a Pagar", "lado": "debe", "importe": 400000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 400000 }
+    ]
+  },
+  {
+    "id": "a118",
+    "nivel": "intermedio",
+    "escenario": "Se recibe un depósito en garantía por alquiler de un local: $90.000 acreditados en banco.",
+    "pista": "Banco sube → Debe. Ingresos Cobrados por Adelantado (pasivo, hasta restituir) → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 90000 },
+      { "cuenta": "Ingresos Cobrados por Adelantado", "lado": "haber", "importe": 90000 }
+    ]
+  },
+  {
+    "id": "a119",
+    "nivel": "intermedio",
+    "escenario": "Se registra pérdida por siniestro (incendio): se da de baja mercaderías por $130.000, parcialmente cubiertos por seguro $90.000.",
+    "pista": "Mercaderías baja → Haber. Seguro a cobrar sube → Debe. La diferencia no cubierta es pérdida extraordinaria → Debe.",
+    "lineas": [
+      { "cuenta": "Deudores Varios", "lado": "debe", "importe": 90000 },
+      { "cuenta": "Pérdidas Extraordinarias por Siniestros", "lado": "debe", "importe": 40000 },
+      { "cuenta": "Mercaderías", "lado": "haber", "importe": 130000 }
+    ]
+  },
+  {
+    "id": "a120",
+    "nivel": "intermedio",
+    "escenario": "Se paga el impuesto a las ganancias (provisión ya registrada) de $320.000 por transferencia bancaria.",
+    "pista": "Provisión Impuesto a las Ganancias (pasivo) disminuye → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Provisión Impuesto a las Ganancias", "lado": "debe", "importe": 320000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 320000 }
+    ]
+  },
+  {
+    "id": "a121",
+    "nivel": "avanzado",
+    "escenario": "Cierre de cuentas de resultado al final del ejercicio. Ventas $2.400.000, CMV $1.440.000, Sueldos y Jornales $380.000, Alquileres Pagados $144.000, Amortizaciones de Bienes de Uso $96.000, Intereses Ganados $48.000. Se cierra contra Resultado del Ejercicio.",
+    "pista": "Los ingresos (saldo Haber) se saldan al Debe. Los gastos (saldo Debe) se saldan al Haber. La diferencia es el Resultado del Ejercicio (ganancia → Haber en PN).",
+    "lineas": [
+      { "cuenta": "Ventas", "lado": "debe", "importe": 2400000 },
+      { "cuenta": "Intereses Ganados", "lado": "debe", "importe": 48000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "haber", "importe": 1440000 },
+      { "cuenta": "Sueldos y Jornales", "lado": "haber", "importe": 380000 },
+      { "cuenta": "Alquileres Pagados", "lado": "haber", "importe": 144000 },
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "haber", "importe": 96000 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "haber", "importe": 388000 }
+    ]
+  },
+  {
+    "id": "a122",
+    "nivel": "avanzado",
+    "escenario": "Se distribuyen los resultados del ejercicio: ganancia $388.000. Reserva legal 5% ($19.400), dividendos $200.000, el resto a Resultados No Asignados ($168.600). Se traslada el Resultado del Ejercicio.",
+    "pista": "Resultado del Ejercicio (PN) disminuye → Debe. Reserva Legal (PN) sube → Haber. Dividendos a Pagar (pasivo) sube → Haber. RNA → Haber.",
+    "lineas": [
+      { "cuenta": "Resultado del Ejercicio", "lado": "debe", "importe": 388000 },
+      { "cuenta": "Reserva Legal", "lado": "haber", "importe": 19400 },
+      { "cuenta": "Dividendos a Pagar", "lado": "haber", "importe": 200000 },
+      { "cuenta": "Resultados No Asignados", "lado": "haber", "importe": 168600 }
+    ]
+  },
+  {
+    "id": "a123",
+    "nivel": "avanzado",
+    "escenario": "La asamblea decide absorber una pérdida acumulada de $520.000 contra Resultados No Asignados ($300.000) y Capital Social ($220.000).",
+    "pista": "RNA disminuye → Debe. Capital Social disminuye → Debe. El Resultado del Ejercicio (pérdida, saldo deudor) se cancela → Haber.",
+    "lineas": [
+      { "cuenta": "Resultados No Asignados", "lado": "debe", "importe": 300000 },
+      { "cuenta": "Capital Social", "lado": "debe", "importe": 220000 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "haber", "importe": 520000 }
+    ]
+  },
+  {
+    "id": "a124",
+    "nivel": "avanzado",
+    "escenario": "Se realiza una revaluación técnica de inmuebles: valor histórico $3.000.000, amortización acumulada $600.000, valor neto contable $2.400.000. Nuevo valor de revalúo $4.200.000. Diferencia $1.800.000.",
+    "pista": "Inmuebles sube → Debe. Amortización Acumulada de Inmuebles se elimina → Debe. La diferencia va a Reserva de Revalúo Técnico (PN, ORI) → Haber. Verificar: débito total = crédito.",
+    "lineas": [
+      { "cuenta": "Inmuebles", "lado": "debe", "importe": 1200000 },
+      { "cuenta": "Amortización Acumulada de Inmuebles", "lado": "debe", "importe": 600000 },
+      { "cuenta": "Reserva de Revalúo Técnico", "lado": "haber", "importe": 1800000 }
+    ]
+  },
+  {
+    "id": "a125",
+    "nivel": "avanzado",
+    "escenario": "Se da de baja una maquinaria totalmente amortizada: costo original $800.000, amortización acumulada $800.000.",
+    "pista": "Al estar totalmente amortizada, el valor neto contable es cero. Se eliminan ambas cuentas sin resultado.",
+    "lineas": [
+      { "cuenta": "Amortización Acumulada de Maquinarias", "lado": "debe", "importe": 800000 },
+      { "cuenta": "Maquinarias", "lado": "haber", "importe": 800000 }
+    ]
+  },
+  {
+    "id": "a126",
+    "nivel": "avanzado",
+    "escenario": "Se vende un rodado con utilidad. Costo $1.200.000, amortización acumulada $900.000, valor neto $300.000. Precio de venta $480.000 cobrado al contado.",
+    "pista": "Caja sube → Debe. Amortización Acumulada de Rodados se elimina → Debe. Rodados baja → Haber. Utilidad en Venta de Bienes de Uso → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 480000 },
+      { "cuenta": "Amortización Acumulada de Rodados", "lado": "debe", "importe": 900000 },
+      { "cuenta": "Rodados", "lado": "haber", "importe": 1200000 },
+      { "cuenta": "Utilidad en Venta de Bienes de Uso", "lado": "haber", "importe": 180000 }
+    ]
+  },
+  {
+    "id": "a127",
+    "nivel": "avanzado",
+    "escenario": "Se vende un equipo de computación con pérdida. Costo $360.000, amortización acumulada $200.000, valor neto $160.000. Precio de venta $120.000 cobrado en efectivo.",
+    "pista": "Caja sube → Debe. Amortización Acumulada se elimina → Debe. Activo Equipos de Computación baja → Haber. Pérdida en Venta → Debe.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 120000 },
+      { "cuenta": "Amortización Acumulada de Equipos de Computación", "lado": "debe", "importe": 200000 },
+      { "cuenta": "Pérdida en Venta de Bienes de Uso", "lado": "debe", "importe": 40000 },
+      { "cuenta": "Equipos de Computación", "lado": "haber", "importe": 360000 }
+    ]
+  },
+  {
+    "id": "a128",
+    "nivel": "avanzado",
+    "escenario": "La asamblea decide capitalizar los Resultados No Asignados por $1.500.000 emitiendo nuevas acciones.",
+    "pista": "RNA (PN) disminuye → Debe. Capital Social (PN) aumenta → Haber. No hay movimiento de fondos; solo reclasificación dentro del PN.",
+    "lineas": [
+      { "cuenta": "Resultados No Asignados", "lado": "debe", "importe": 1500000 },
+      { "cuenta": "Capital Social", "lado": "haber", "importe": 1500000 }
+    ]
+  },
+  {
+    "id": "a129",
+    "nivel": "avanzado",
+    "escenario": "Se constituye una provisión para un juicio laboral con probabilidad alta de condena estimada en $850.000.",
+    "pista": "El gasto de la previsión → Debe. Previsión para Juicios (pasivo) → Haber.",
+    "lineas": [
+      { "cuenta": "Indemnizaciones por Despido", "lado": "debe", "importe": 850000 },
+      { "cuenta": "Previsión para Juicios", "lado": "haber", "importe": 850000 }
+    ]
+  },
+  {
+    "id": "a130",
+    "nivel": "avanzado",
+    "escenario": "Ajuste contable por inflación (RT 6): posición monetaria neta activa de $2.000.000 × inflación mensual 8% = REI negativo $160.000.",
+    "pista": "Tener activos monetarios en inflación genera pérdida de poder adquisitivo. REI (Resultado por Exposición a la Inflación) → Debe. El ajuste contrapartida va a cada cuenta monetaria afectada, simplificado contra RNA.",
+    "lineas": [
+      { "cuenta": "Resultado por Exposición a la Inflación (REI)", "lado": "debe", "importe": 160000 },
+      { "cuenta": "Resultados No Asignados", "lado": "haber", "importe": 160000 }
+    ]
+  },
+  {
+    "id": "a131",
+    "nivel": "avanzado",
+    "escenario": "Se importan mercaderías CIF: valor FOB $1.800.000, flete internacional $180.000, seguro $36.000. Se paga todo al contado por banco. Total CIF $2.016.000.",
+    "pista": "El costo de importación incluye FOB + flete + seguro = valor de incorporación al activo. Mercaderías sube por CIF total → Debe. Banco baja → Haber.",
+    "lineas": [
+      { "cuenta": "Mercaderías", "lado": "debe", "importe": 2016000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 2016000 }
+    ]
+  },
+  {
+    "id": "a132",
+    "nivel": "avanzado",
+    "escenario": "Importación con registro detallado: Mercaderías en Tránsito FOB $1.800.000, Flete y Transporte $180.000, Seguros $36.000. Se acumula en Mercaderías en Tránsito.",
+    "pista": "Cada componente del costo CIF activa el bien en tránsito. Tres débitos a Mercaderías en Tránsito, luego tres créditos a Banco / Acreedores.",
+    "lineas": [
+      { "cuenta": "Mercadería en Tránsito", "lado": "debe", "importe": 1800000 },
+      { "cuenta": "Flete y Transporte de Ventas", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Seguros", "lado": "debe", "importe": 36000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "haber", "importe": 1800000 },
+      { "cuenta": "Acreedores Varios", "lado": "haber", "importe": 216000 }
+    ]
+  },
+  {
+    "id": "a133",
+    "nivel": "avanzado",
+    "escenario": "Cierre de cuentas de resultado con pérdida: Ventas $980.000, CMV $720.000, Sueldos $310.000, Alquileres $96.000, Intereses Pagados $42.000. Resultado del Ejercicio (pérdida $188.000).",
+    "pista": "Ventas (ingreso, saldo acreedor) se debita para cerrarse. Gastos (saldos deudores) se acreditan. La pérdida queda en Resultado del Ejercicio al Debe (PN disminuye).",
+    "lineas": [
+      { "cuenta": "Ventas", "lado": "debe", "importe": 980000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "haber", "importe": 720000 },
+      { "cuenta": "Sueldos y Jornales", "lado": "haber", "importe": 310000 },
+      { "cuenta": "Alquileres Pagados", "lado": "haber", "importe": 96000 },
+      { "cuenta": "Intereses Pagados", "lado": "haber", "importe": 42000 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "debe", "importe": 188000 }
+    ]
+  },
+  {
+    "id": "a134",
+    "nivel": "avanzado",
+    "escenario": "Se distribuyen resultados de $1.050.000: Reserva Legal 5% ($52.500), Reserva Facultativa $200.000, Dividendos $500.000, RNA el resto ($297.500).",
+    "pista": "Resultado del Ejercicio → Debe. Reservas y Dividendos a Pagar → Haber. RNA → Haber.",
+    "lineas": [
+      { "cuenta": "Resultado del Ejercicio", "lado": "debe", "importe": 1050000 },
+      { "cuenta": "Reserva Legal", "lado": "haber", "importe": 52500 },
+      { "cuenta": "Reserva Facultativa", "lado": "haber", "importe": 200000 },
+      { "cuenta": "Dividendos a Pagar", "lado": "haber", "importe": 500000 },
+      { "cuenta": "Resultados No Asignados", "lado": "haber", "importe": 297500 }
+    ]
+  },
+  {
+    "id": "a135",
+    "nivel": "avanzado",
+    "escenario": "Se da de baja un inmueble vendido con utilidad: costo $5.000.000, amortización acumulada $1.500.000, valor neto contable $3.500.000. Precio de venta $4.800.000 cobrado por banco.",
+    "pista": "Banco sube → Debe. Amortización Acumulada de Inmuebles se elimina → Debe. Inmuebles baja → Haber. Utilidad en Venta de Bienes de Uso → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 4800000 },
+      { "cuenta": "Amortización Acumulada de Inmuebles", "lado": "debe", "importe": 1500000 },
+      { "cuenta": "Inmuebles", "lado": "haber", "importe": 5000000 },
+      { "cuenta": "Utilidad en Venta de Bienes de Uso", "lado": "haber", "importe": 1300000 }
+    ]
+  },
+  {
+    "id": "a136",
+    "nivel": "avanzado",
+    "escenario": "Se venden muebles con pérdida: costo $240.000, amortización acumulada $80.000, valor neto $160.000. Precio de venta $110.000 cobrado al contado.",
+    "pista": "Caja sube → Debe. Amortización Acumulada de Muebles y Útiles → Debe. Pérdida en Venta → Debe. Muebles y Útiles baja → Haber.",
+    "lineas": [
+      { "cuenta": "Caja", "lado": "debe", "importe": 110000 },
+      { "cuenta": "Amortización Acumulada de Muebles y Útiles", "lado": "debe", "importe": 80000 },
+      { "cuenta": "Pérdida en Venta de Bienes de Uso", "lado": "debe", "importe": 50000 },
+      { "cuenta": "Muebles y Útiles", "lado": "haber", "importe": 240000 }
+    ]
+  },
+  {
+    "id": "a137",
+    "nivel": "avanzado",
+    "escenario": "Se capitaliza el Ajuste Integral del Capital por $800.000 (inflación) emitiendo nuevas acciones sin contrapartida de fondos.",
+    "pista": "Ajuste Integral del Capital (PN) disminuye → Debe. Capital Social (PN) aumenta → Haber. Reclasificación interna en el PN.",
+    "lineas": [
+      { "cuenta": "Ajuste Integral del Capital", "lado": "debe", "importe": 800000 },
+      { "cuenta": "Capital Social", "lado": "haber", "importe": 800000 }
+    ]
+  },
+  {
+    "id": "a138",
+    "nivel": "avanzado",
+    "escenario": "Se constituye una provisión para juicios laborales (pasivo no corriente) por $620.000.",
+    "pista": "El gasto por contingencia → Debe. Previsión para Juicios Laborales (pasivo no corriente) → Haber.",
+    "lineas": [
+      { "cuenta": "Indemnizaciones por Despido", "lado": "debe", "importe": 620000 },
+      { "cuenta": "Previsión para Juicios Laborales", "lado": "haber", "importe": 620000 }
+    ]
+  },
+  {
+    "id": "a139",
+    "nivel": "avanzado",
+    "escenario": "Cierre de ejercicio completo: Ventas $3.800.000, Intereses Ganados $95.000, CMV $2.280.000, Sueldos y Jornales $560.000, Cargas Sociales $154.000, Amortizaciones de Bienes de Uso $120.000, Alquileres Pagados $180.000, Impuesto a las Ganancias $210.750. Resultado ganancia $390.250.",
+    "pista": "Ingresos al Debe (se saldan). Gastos al Haber (se saldan). Resultado del Ejercicio → Haber (ganancia).",
+    "lineas": [
+      { "cuenta": "Ventas", "lado": "debe", "importe": 3800000 },
+      { "cuenta": "Intereses Ganados", "lado": "debe", "importe": 95000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "haber", "importe": 2280000 },
+      { "cuenta": "Sueldos y Jornales", "lado": "haber", "importe": 560000 },
+      { "cuenta": "Cargas Sociales", "lado": "haber", "importe": 154000 },
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "haber", "importe": 120000 },
+      { "cuenta": "Alquileres Pagados", "lado": "haber", "importe": 180000 },
+      { "cuenta": "Impuesto a las Ganancias", "lado": "haber", "importe": 210750 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "haber", "importe": 390250 }
+    ]
+  },
+  {
+    "id": "a140",
+    "nivel": "avanzado",
+    "escenario": "Se da de baja herramientas totalmente amortizadas por $95.000 (costo original = amortización acumulada).",
+    "pista": "Sin resultado porque están totalmente amortizadas. Eliminar ambas cuentas.",
+    "lineas": [
+      { "cuenta": "Amortización Acumulada de Herramientas", "lado": "debe", "importe": 95000 },
+      { "cuenta": "Herramientas", "lado": "haber", "importe": 95000 }
+    ]
+  },
+  {
+    "id": "a141",
+    "nivel": "avanzado",
+    "escenario": "REI positivo: posición monetaria neta pasiva de $3.000.000 × inflación 6% = $180.000. Empresa con más pasivos que activos monetarios gana con la inflación.",
+    "pista": "Tener más pasivos monetarios en inflación genera ganancia de poder adquisitivo. Las cuentas de pasivo se ajustan y la diferencia es ingreso.",
+    "lineas": [
+      { "cuenta": "Resultados No Asignados", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Resultado por Exposición a la Inflación (REI)", "lado": "haber", "importe": 180000 }
+    ]
+  },
+  {
+    "id": "a142",
+    "nivel": "avanzado",
+    "escenario": "Se integra el capital suscripto pendiente: socios aportan $600.000 que se acreditan en Banco Nación CC.",
+    "pista": "Banco sube (efectivo ingresado) → Debe. Capital Suscripto (pendiente) disminuye → Haber no aplica; lo correcto: Capital Integrado sube → Haber. Capital Suscripto se reclasifica.",
+    "pista": "Banco sube → Debe. Capital Suscripto disminuye → Debe (era activo diferencial). Capital Integrado sube → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 600000 },
+      { "cuenta": "Capital Suscripto", "lado": "haber", "importe": 600000 }
+    ]
+  },
+  {
+    "id": "a143",
+    "nivel": "avanzado",
+    "escenario": "Se aprueba en asamblea el aumento de capital social por $2.000.000 mediante aportes irrevocables ya registrados y $500.000 en efectivo.",
+    "pista": "Aportes Irrevocables (PN) se capitalizan → Debe. Banco sube por el efectivo → Debe. Capital Social sube → Haber.",
+    "lineas": [
+      { "cuenta": "Aportes Irrevocables a Cuenta de Futuras Suscripciones", "lado": "debe", "importe": 2000000 },
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 500000 },
+      { "cuenta": "Capital Social", "lado": "haber", "importe": 2500000 }
+    ]
+  },
+  {
+    "id": "a144",
+    "nivel": "avanzado",
+    "escenario": "Se registra la baja de una instalación con pérdida: costo $420.000, amortización acumulada $180.000, valor neto $240.000. Se vende por $180.000 transferencia bancaria.",
+    "pista": "Banco sube → Debe. Amortización Acumulada de Instalaciones → Debe. Pérdida en Venta de Bienes de Uso → Debe. Instalaciones baja → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Amortización Acumulada de Instalaciones", "lado": "debe", "importe": 180000 },
+      { "cuenta": "Pérdida en Venta de Bienes de Uso", "lado": "debe", "importe": 60000 },
+      { "cuenta": "Instalaciones", "lado": "haber", "importe": 420000 }
+    ]
+  },
+  {
+    "id": "a145",
+    "nivel": "avanzado",
+    "escenario": "Distribución de resultados $780.000: Reserva Legal $39.000 (5%), Reserva para Renovación de Bienes de Uso $150.000, Honorarios Directores $120.000, Dividendos $300.000, RNA $171.000.",
+    "pista": "Resultado del Ejercicio al Debe. Cada destino al Haber: PN los que van a reservas, pasivo lo que se debe pagar.",
+    "lineas": [
+      { "cuenta": "Resultado del Ejercicio", "lado": "debe", "importe": 780000 },
+      { "cuenta": "Reserva Legal", "lado": "haber", "importe": 39000 },
+      { "cuenta": "Reserva para Renovación de Bienes de Uso", "lado": "haber", "importe": 150000 },
+      { "cuenta": "Honorarios Directores a Pagar", "lado": "haber", "importe": 120000 },
+      { "cuenta": "Dividendos a Pagar", "lado": "haber", "importe": 300000 },
+      { "cuenta": "Resultados No Asignados", "lado": "haber", "importe": 171000 }
+    ]
+  },
+  {
+    "id": "a146",
+    "nivel": "avanzado",
+    "escenario": "Ajuste por inflación integral: se ajustan los bienes de uso por REI. Inmuebles histórico $5.000.000 × coeficiente 1,15 = $5.750.000. Diferencia $750.000. Amortización acumulada también se ajusta: $600.000 × 1,15 = $690.000. Diferencia $90.000. El neto $660.000 a Ajuste Integral del Capital.",
+    "pista": "Inmuebles sube → Debe. Amortización Acumulada de Inmuebles sube → Haber. Ajuste Integral del Capital (PN) sube por neto → Haber.",
+    "lineas": [
+      { "cuenta": "Inmuebles", "lado": "debe", "importe": 750000 },
+      { "cuenta": "Amortización Acumulada de Inmuebles", "lado": "haber", "importe": 90000 },
+      { "cuenta": "Ajuste Integral del Capital", "lado": "haber", "importe": 660000 }
+    ]
+  },
+  {
+    "id": "a147",
+    "nivel": "avanzado",
+    "escenario": "Cierre contable completo con resultado negativo (pérdida $245.000): Ventas $1.200.000, CMV $780.000, Sueldos $360.000, Alquileres $96.000, Amortizaciones $72.000, Intereses Pagados $48.000, Diferencia de Cambio Negativa $89.000.",
+    "pista": "Ingresos al Debe. Gastos al Haber. Pérdida queda en Resultado del Ejercicio al Debe.",
+    "lineas": [
+      { "cuenta": "Ventas", "lado": "debe", "importe": 1200000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "haber", "importe": 780000 },
+      { "cuenta": "Sueldos y Jornales", "lado": "haber", "importe": 360000 },
+      { "cuenta": "Alquileres Pagados", "lado": "haber", "importe": 96000 },
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "haber", "importe": 72000 },
+      { "cuenta": "Intereses Pagados", "lado": "haber", "importe": 48000 },
+      { "cuenta": "Diferencia de Cambio Negativa", "lado": "haber", "importe": 89000 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "debe", "importe": 245000 }
+    ]
+  },
+  {
+    "id": "a148",
+    "nivel": "avanzado",
+    "escenario": "Se recibe indemnización de seguro por siniestro de rodado: valor neto contable del rodado $280.000 (costo $700.000, amortización $420.000), indemnización cobrada $320.000.",
+    "pista": "Banco sube por indemnización → Debe. Amortización Acumulada de Rodados → Debe. Rodados baja → Haber. Cobros por Siniestros (diferencia positiva) → Haber.",
+    "lineas": [
+      { "cuenta": "Banco Nación Cuenta Corriente", "lado": "debe", "importe": 320000 },
+      { "cuenta": "Amortización Acumulada de Rodados", "lado": "debe", "importe": 420000 },
+      { "cuenta": "Rodados", "lado": "haber", "importe": 700000 },
+      { "cuenta": "Cobros por Siniestros", "lado": "haber", "importe": 40000 }
+    ]
+  },
+  {
+    "id": "a149",
+    "nivel": "avanzado",
+    "escenario": "Se registra la desvalorización (impairment) de un software: valor neto contable $240.000, valor recuperable $180.000. Diferencia $60.000.",
+    "pista": "Resultado por Desvalorización de Activos (gasto) → Debe. Amortización Acumulada de Software (incremento) → Haber.",
+    "lineas": [
+      { "cuenta": "Resultado por Desvalorización de Activos", "lado": "debe", "importe": 60000 },
+      { "cuenta": "Amortización Acumulada de Software", "lado": "haber", "importe": 60000 }
+    ]
+  },
+  {
+    "id": "a150",
+    "nivel": "avanzado",
+    "escenario": "Cierre de ejercicio con todos los rubros: Ventas $4.500.000, Alquileres Ganados $120.000, Intereses Ganados $75.000, CMV $2.700.000, Sueldos y Jornales $620.000, Cargas Sociales $170.500, Amortizaciones $144.000, Alquileres Pagados $216.000, Seguros $48.000, Intereses Pagados $85.500, Impuesto a las Ganancias $248.500. Resultado ganancia $462.500.",
+    "pista": "Saldar todos los ingresos al Debe y todos los gastos al Haber. El resultado neto positivo va al Haber en Resultado del Ejercicio.",
+    "lineas": [
+      { "cuenta": "Ventas", "lado": "debe", "importe": 4500000 },
+      { "cuenta": "Alquileres Ganados", "lado": "debe", "importe": 120000 },
+      { "cuenta": "Intereses Ganados", "lado": "debe", "importe": 75000 },
+      { "cuenta": "Costo de Mercaderías Vendidas (CMV)", "lado": "haber", "importe": 2700000 },
+      { "cuenta": "Sueldos y Jornales", "lado": "haber", "importe": 620000 },
+      { "cuenta": "Cargas Sociales", "lado": "haber", "importe": 170500 },
+      { "cuenta": "Amortizaciones de Bienes de Uso", "lado": "haber", "importe": 144000 },
+      { "cuenta": "Alquileres Pagados", "lado": "haber", "importe": 216000 },
+      { "cuenta": "Seguros", "lado": "haber", "importe": 48000 },
+      { "cuenta": "Intereses Pagados", "lado": "haber", "importe": 85500 },
+      { "cuenta": "Impuesto a las Ganancias", "lado": "haber", "importe": 248500 },
+      { "cuenta": "Resultado del Ejercicio", "lado": "haber", "importe": 462500 }
+    ]
+  }
+]
